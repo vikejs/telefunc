@@ -1,30 +1,30 @@
 {
   "renderer/_default.page.client.ts": {
-    "file": "assets/renderer/_default.page.client.ts.19562533.js",
+    "file": "assets/renderer/_default.page.client.ts.4e8b1778.js",
     "src": "renderer/_default.page.client.ts",
     "isEntry": true,
     "imports": [
-      "_Navigation.client.e046d7f2.js",
-      "_vendor.3a8ad928.js"
+      "_Navigation.client.287bedd5.js",
+      "_vendor.7f883c29.js"
     ]
   },
   "pages/index/index.page.client.ts": {
-    "file": "assets/pages/index/index.page.client.ts.10b13728.js",
+    "file": "assets/pages/index/index.page.client.ts.81514de1.js",
     "src": "pages/index/index.page.client.ts",
     "isEntry": true,
     "imports": [
-      "_Navigation.client.e046d7f2.js",
-      "_vendor.3a8ad928.js"
+      "_Navigation.client.287bedd5.js",
+      "_vendor.7f883c29.js"
     ],
     "css": [
       "assets/pages/index/index.page.client.ts.87a56ec4.css"
     ]
   },
-  "_vendor.3a8ad928.js": {
-    "file": "assets/vendor.3a8ad928.js"
+  "_vendor.7f883c29.js": {
+    "file": "assets/vendor.7f883c29.js"
   },
-  "_Navigation.client.e046d7f2.js": {
-    "file": "assets/Navigation.client.e046d7f2.js",
+  "_Navigation.client.287bedd5.js": {
+    "file": "assets/Navigation.client.287bedd5.js",
     "css": [
       "assets/Navigation.client.301c0b6a.css"
     ],
