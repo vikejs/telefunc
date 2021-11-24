@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+    <html>
+      <head>
+        <link rel="icon" href="/assets/telefunc.e2f37946.svg" />
+        <title>Abort() &amp; shield() | Telefunc</title>
+        
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+      <link rel="stylesheet" type="text/css" href="/assets/Navigation.client.ed6c1c74.css"><link rel="preload" as="font" crossorigin type="font/ttf" href="/assets/Inter-Var.2bc54814.ttf"><link rel="modulepreload" as="script" type="text/javascript" href="/assets/Navigation.client.1b3f7dfd.js"></head>
+      <body>
+        <div id="page-view"><div style="display:flex" data-reactroot=""><div id="navigation-container" style="flex-shrink:0;border-right:1px solid #eee"><div style="display:flex;flex-direction:column;align-items:center"><a id="navigation-header-logo" style="display:flex;align-items:center;color:inherit;justify-content:left;text-decoration:none;padding-top:20px;padding-bottom:11px" href="/"><img src="/assets/telefunc.e2f37946.svg" height="55" width="55"/><span style="font-size:2.55em;margin-left:10px;font-weight:600">Telefunc</span></a><div style="display:flex;align-items:center;padding-top:0;justify-content:left"><a class="colorize-on-hover decolorize-4" href="https://github.com/brillout/telefunc" style="padding:3px;display:inline-block;line-height:0"><img src="/assets/github.86a91340.svg" height="20"/></a><a class="colorize-on-hover decolorize-6" href="https://discord.gg/qTq92FQzKb" style="padding:3px;display:inline-block;line-height:0"><img src="/assets/discord.c14881e9.svg" height="20"/></a><a class="colorize-on-hover decolorize-7" href="https://twitter.com/brillout" style="padding:3px;display:inline-block;line-height:0"><img src="/assets/twitter.c1bd51e1.svg" height="20"/></a><a href="https://github.com/brillout/telefunc/blob/master/CHANGELOG.md" class="button colorize-on-hover" style="display:flex;align-items:center;padding:1px 7px;margin-left:2px;font-size:0.97em;color:inherit"><span class="decolorize-7">v<!-- -->0.1.0-beta.1</span><img class="decolorize-6" src="/assets/changelog.062bdc49.svg" height="16" style="margin-left:5px"/></a></div></div><div id="navigation-content" style="position:relative"><a class="nav-item nav-item-h1"><span style="font-size:1.4em"><img src="/assets/compass.023c5145.svg" style="vertical-align:text-top;font-size:1em;width:1.4em"/> <span style="font-size:1rem">Overview</span></span></a><a class="nav-item nav-item-h2" href="/">Introduction</a><a class="nav-item nav-item-h2" href="/tour">Tour</a><a class="nav-item nav-item-h1"><span style="font-size:1.4em">🌱<!-- --> <span style="font-size:1rem">Get Started</span></span></a><a class="nav-item nav-item-h2" href="/scaffold">Scaffold new app</a><a class="nav-item nav-item-h2" href="/add">Add to existing app</a><a class="nav-item nav-item-h1"><span style="font-size:1.4em">📚<!-- --> <span style="font-size:1rem">Guides</span></span></a><a class="nav-item nav-item-h4">Basics</a><a class="nav-item nav-item-h2  is-active" href="/shield"><code>Abort()</code> &amp; <code>shield()</code></a><a class="nav-item nav-item-h3" href="#telefunctions-are-public">Telefunctions are public</a><a class="nav-item nav-item-h3" href="#throw-new-abort"><code>throw new Abort()</code></a><a class="nav-item nav-item-h3" href="#shield"><code>shield()</code></a><a class="nav-item nav-item-h3" href="#typescript">TypeScript</a><a class="nav-item nav-item-h2" href="/permission">Permission</a><a class="nav-item nav-item-h2" href="/auth">Authentication</a><a class="nav-item nav-item-h2" href="/error-handling">Error Handling</a></div></div><div id="navigation-mask"></div><div id="page-container" class="doc-page"><div id="mobile-header" style="height:var(--mobile-header-height);width:100vw;position:relative"><div style="position:fixed;display:flex;align-items:center;background:white;z-index:999;top:0;left:0;height:var(--mobile-header-height);width:100%;border-bottom:1px solid #ddd"><div style="padding:20px;line-height:0" id="menu-toggle"><svg style="width:20px" class="icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/" style="color:inherit;display:flex;align-items:center;justify-content:left;text-decoration:none"><img src="/assets/telefunc.e2f37946.svg" height="40" width="40"/><span style="font-size:1.55em;margin-left:6px;font-weight:600">Telefunc</span></a></div></div><div id="page-content"><h1><code>Abort()</code> &amp; <code>shield()</code></h1><h2>Telefunctions are public</h2><p>Telefunctions are public: anyone in the world can call our telefunctions.</p><p>For example,
+the following telefunction exposes our entire database to the world:</p><pre><code class="hljs language-js"><span class="hljs-comment">// query.telefunc.js</span>
+<span class="hljs-comment">// Environment: Node.js</span>
+
+<span class="hljs-keyword">export</span> { executeQuery }
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">executeQuery</span>(<span class="hljs-params">query</span>) </span>{
+  <span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> database.runSQL(query)
+  <span class="hljs-keyword">return</span> result
+}</code></pre><p>Because anyone can call <code>executeQuery()</code> and therefore access our whole database:</p><pre><code class="hljs language-js"><span class="hljs-comment">// Environment: Anyone&#x27;s browser</span>
+
+<span class="hljs-comment">// Anyone in the world can go to our website,</span>
+<span class="hljs-comment">// open the browser&#x27;s web dev console, and call our telefunctions.</span>
+
+<span class="hljs-keyword">const</span> users = <span class="hljs-keyword">await</span> executeQuery(<span class="hljs-string">&#x27;SELECT login, password FROM users;&#x27;</span>)
+users.forEach(<span class="hljs-function">(<span class="hljs-params">{login, password}</span>) =&gt;</span> {
+  <span class="hljs-comment">// W00t I have all passwords ｡^‿^｡</span>
+  <span class="hljs-built_in">console</span>.log(login, password)
+})</code></pre><pre><code class="hljs language-js"><span class="hljs-comment">// query.telefunc.js</span>
+<span class="hljs-comment">// Environment: Node.js</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">executeQuery</span>(<span class="hljs-params">query</span>) </span>{
+  <span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> database.runSQL(query)
+  <span class="hljs-keyword">return</span> result
+}</code></pre><h2><code>throw new Abort()</code></h2><p>We can use <code>throw new Abort()</code> to make our telefunctions safe:</p><pre><code class="hljs language-js"><span class="hljs-comment">// query.telefunc.js</span>
+<span class="hljs-comment">// Environment: Node.js</span>
+
+<span class="hljs-keyword">import</span> { getContext, Abort } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;telefunc&#x27;</span>
+
+<span class="hljs-keyword">export</span> { executeQuery }
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">executeQuery</span>(<span class="hljs-params">query</span>) </span>{
+  <span class="hljs-keyword">const</span> context = getContext()
+
+  <span class="hljs-comment">// We use `Abort()` to implement a permission:</span>
+  <span class="hljs-comment">// Only admins should be able to run arbitrary SQL queries.</span>
+  <span class="hljs-keyword">if</span>( !context.user?.isAdmin ) {
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Abort()
+  }
+
+  <span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> database.runSQL(query)
+  <span class="hljs-keyword">return</span> result
+}</code></pre><h2><code>shield()</code></h2><p>Because our telefunctions can be called by anyone, the arguments can have any value:</p><pre><code class="hljs language-js"><span class="hljs-comment">// hello.telefunc.js</span>
+
+<span class="hljs-keyword">export</span> { hello }
+
+<span class="hljs-comment">// Our frontend may always call `hello({ name })`,</span>
+<span class="hljs-comment">// but anyone in the world can call `hello(undefined)`.</span>
+funtion <span class="hljs-function"><span class="hljs-title">hello</span>(<span class="hljs-params">arg</span>)</span> {
+  <span class="hljs-comment">// This may throw: `Uncaught TypeError: Cannot read property &#x27;name&#x27; of undefined`</span>
+  <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;Welcome &#x27;</span>+arg.name
+}</code></pre><p>We can use <code>shield()</code> to ensure the structure of our arguments.</p><pre><code class="hljs language-js"><span class="hljs-comment">// hello.telefunc.js</span>
+
+<span class="hljs-keyword">import</span> { shield } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;telefunc&#x27;</span>
+
+<span class="hljs-keyword">export</span> { hello }
+
+shield(hello, [{ <span class="hljs-attr">name</span>: shield.type.string }])
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">hello</span>(<span class="hljs-params">arg</span>) </span>{
+  <span class="hljs-comment">// `shield()` guarantees `arg` to always be an object of type `{ name: string }`</span>
+  <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;Welcome &#x27;</span>+arg.name
+}</code></pre><h2>TypeScript</h2><p>When using TypeScript, <code>shield()</code> infers the argument types.</p><pre><code class="hljs language-js"><span class="hljs-keyword">import</span> { shield } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;telefunc&#x27;</span>
+
+<span class="hljs-keyword">export</span> { onNewTodo }
+
+<span class="hljs-comment">// A telefunction for when the user creates a new to-do.</span>
+<span class="hljs-keyword">const</span> t = shield.type
+shield(onNewTodo, [ t.string, t.array(t.string) ])
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onNewTodo</span>(<span class="hljs-params">text, tags</span>) </span>{
+  
+}</code></pre><p>, so that supports TypeScript, whichs means</p><pre><code class="hljs language-ts"></code></pre><pre><code>Especially when using typescript
+
+Because, we cannot assume the type of the arguments
+We cannot assume
+
+```ts
+</code></pre><div style="margin-top:50px"><a href="https://github.com/brillout/telefunc/edit/master/docs/pages/shield.page.mdx">✍<!-- --> Edit this page</a></div></div></div></div></div>
+      <script type="module" src="/assets/renderer/_default.page.client.ts.64427182.js"></script><script id="vite-plugin-ssr_pageContext" type="application/json">{"pageContext":{"_pageId":"/pages/shield"}}</script></body>
+    </html>

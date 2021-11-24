@@ -1,32 +1,27 @@
 {
   "renderer/_default.page.client.ts": {
-    "file": "assets/renderer/_default.page.client.ts.4e8b1778.js",
+    "file": "assets/renderer/_default.page.client.ts.64427182.js",
     "src": "renderer/_default.page.client.ts",
     "isEntry": true,
     "imports": [
-      "_Navigation.client.287bedd5.js",
-      "_vendor.7f883c29.js"
+      "_Navigation.client.1b3f7dfd.js"
     ]
   },
   "pages/index/index.page.client.ts": {
-    "file": "assets/pages/index/index.page.client.ts.81514de1.js",
+    "file": "assets/pages/index/index.page.client.ts.504b256b.js",
     "src": "pages/index/index.page.client.ts",
     "isEntry": true,
     "imports": [
-      "_Navigation.client.287bedd5.js",
-      "_vendor.7f883c29.js"
+      "_Navigation.client.1b3f7dfd.js"
     ],
     "css": [
-      "assets/pages/index/index.page.client.ts.87a56ec4.css"
+      "assets/pages/index/index.page.client.ts.5b3b542a.css"
     ]
   },
-  "_vendor.7f883c29.js": {
-    "file": "assets/vendor.7f883c29.js"
-  },
-  "_Navigation.client.287bedd5.js": {
-    "file": "assets/Navigation.client.287bedd5.js",
+  "_Navigation.client.1b3f7dfd.js": {
+    "file": "assets/Navigation.client.1b3f7dfd.js",
     "css": [
-      "assets/Navigation.client.301c0b6a.css"
+      "assets/Navigation.client.ed6c1c74.css"
     ],
     "assets": [
       "assets/Inter-Var.2bc54814.ttf"
