@@ -8,20 +8,20 @@
     ]
   },
   "pages/index/index.page.client.ts": {
-    "file": "assets/pages/index/index.page.client.ts.504b256b.js",
+    "file": "assets/pages/index/index.page.client.ts.0323efc4.js",
     "src": "pages/index/index.page.client.ts",
     "isEntry": true,
     "imports": [
       "_Navigation.client.1b3f7dfd.js"
     ],
     "css": [
-      "assets/pages/index/index.page.client.ts.5b3b542a.css"
+      "assets/pages/index/index.page.client.ts.3b78ab4a.css"
     ]
   },
   "_Navigation.client.1b3f7dfd.js": {
     "file": "assets/Navigation.client.1b3f7dfd.js",
     "css": [
-      "assets/Navigation.client.4d41c3f5.css"
+      "assets/Navigation.client.adb932c0.css"
     ],
     "assets": [
       "assets/Inter-Var.2bc54814.ttf"
