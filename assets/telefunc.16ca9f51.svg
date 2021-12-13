@@ -7,12 +7,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="44.829689"
-   height="46.020657"
+   width="47.019661"
+   height="47.019661"
    version="1.1"
-   viewBox="0 0 44.829689 46.020657"
+   viewBox="0 0 47.019661 47.019662"
    id="svg853"
-   sodipodi:docname="telefunc3.svg"
+   sodipodi:docname="telefunc.svg"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
   <defs
      id="defs857" />
@@ -30,8 +30,8 @@
      id="namedview855"
      showgrid="false"
      inkscape:zoom="4"
-     inkscape:cx="23.606414"
-     inkscape:cy="8.5818487"
+     inkscape:cx="8.4596122"
+     inkscape:cy="15.95516"
      inkscape:window-x="0"
      inkscape:window-y="16"
      inkscape:window-maximized="1"
@@ -41,7 +41,8 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      units="px"
-     scale-x="1" />
+     scale-x="1"
+     showborder="true" />
   <metadata
      id="metadata815">
     <rdf:RDF>
@@ -55,15 +56,15 @@
     </rdf:RDF>
   </metadata>
   <ellipse
-     style="opacity:1;fill:#f7e018;fill-opacity:1;stroke:#31343d;stroke-width:2.12100005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+     style="opacity:1;fill:#f7e018;fill-opacity:1;stroke:#31343d;stroke-width:3.11999989;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
      id="path816"
-     cx="22.414845"
-     cy="23.010328"
+     cx="23.50983"
+     cy="23.50983"
      rx="21.354345"
      ry="21.949829" />
   <path
-     d="M 14.654152,33.515771 21.662169,23.01049 14.654152,12.504887 h 5.256011 l 14.01539,21.010777 h -5.255476 l -4.379743,-6.565708 -4.380597,6.565708 z"
+     d="M 15.094084,33.515632 22.102101,23.010351 15.094084,12.504749 h 5.256011 l 14.01539,21.010776 h -5.255476 l -4.379743,-6.565708 -4.380597,6.565708 z"
      id="path930"
      inkscape:connector-curvature="0"
-     style="fill:#31343d;fill-opacity:1;stroke:#31343d;stroke-width:0.2832194" />
+     style="fill:#31343d;fill-opacity:1;stroke:#31343d;stroke-width:1.28299999;stroke-miterlimit:4;stroke-dasharray:none" />
 </svg>
