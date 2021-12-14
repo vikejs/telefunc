@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
       <link rel="stylesheet" type="text/css" href="/assets/Navigation.client.11d69380.css"><link rel="preload" as="font" crossorigin type="font/ttf" href="/assets/Inter-Var.2bc54814.ttf"><link rel="modulepreload" as="script" type="text/javascript" href="/assets/Navigation.client.cf524ec8.js"></head>
       <body>
-        <div id="page-view"><div style="display:flex" data-reactroot=""><div id="navigation-container" style="flex-shrink:0;border-right:1px solid #eee"><div style="display:flex;flex-direction:column;align-items:center"><a id="navigation-header-logo" style="display:flex;align-items:center;color:inherit;justify-content:left;text-decoration:none;padding-top:20px;padding-bottom:11px" href="/"><img src="/assets/telefunc.16ca9f51.svg" height="55" width="55"/><span style="font-size:2.55em;margin-left:10px;font-weight:600">Telefunc</span></a><div style="display:flex;align-items:center;padding-top:0;justify-content:left"><a class="colorize-on-hover decolorize-4" href="https://github.com/vikejs/telefunc" style="padding:3px;display:inline-block;line-height:0"><img src="/assets/github.86a91340.svg" height="20"/></a><a class="colorize-on-hover decolorize-6" href="https://discord.com/invite/3DYWwk4xRQ" style="padding:3px;display:inline-block;line-height:0"><img src="/assets/discord.c14881e9.svg" height="20"/></a><a class="colorize-on-hover decolorize-7" href="https://twitter.com/brillout" style="padding:3px;display:inline-block;line-height:0"><img src="/assets/twitter.c1bd51e1.svg" height="20"/></a><a href="https://github.com/vikejs/telefunc/blob/master/CHANGELOG.md" class="button colorize-on-hover" style="display:flex;align-items:center;padding:1px 7px;margin-left:2px;font-size:0.97em;color:inherit"><span class="decolorize-7">v<!-- -->0.1.0-beta.1</span><img class="decolorize-6" src="/assets/changelog.062bdc49.svg" height="16" style="margin-left:5px"/></a></div></div><div id="navigation-content" style="position:relative"><a class="nav-item nav-item-h1 nav-item-first-of-its-kind nav-item-last-of-its-kind"><span style="font-size:1.4em"><img src="/assets/compass.023c5145.svg" style="vertical-align:text-top;font-size:1em;width:1.4em"/> <span style="font-size:1rem">Overview</span></span></a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind" href="/">Introduction</a><a class="nav-item nav-item-h2  is-active nav-item-last-of-its-kind" href="/tour">Tour</a><a class="nav-item nav-item-h3 nav-item-first-of-its-kind" href="#hello-world">Hello World</a><a class="nav-item nav-item-h3" href="#orm-sql">ORM &amp; SQL</a><a class="nav-item nav-item-h3" href="#how-it-works">How it works</a><a class="nav-item nav-item-h3" href="#telefunctions-need-protection">Telefunctions need protection</a><a class="nav-item nav-item-h3" href="#shield-abort"><code>shield()</code> &amp; <code>Abort()</code></a><a class="nav-item nav-item-h3" href="#authentication">Authentication</a><a class="nav-item nav-item-h3" href="#inversion-of-control">Inversion of control</a><a class="nav-item nav-item-h3 nav-item-last-of-its-kind" href="#typescript">TypeScript</a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind nav-item-last-of-its-kind" href="/RPC-vs-GraphQL-REST">RPC vs GraphQL/REST</a><a class="nav-item nav-item-h1 nav-item-first-of-its-kind nav-item-last-of-its-kind"><span style="font-size:1.4em">🌱<!-- --> <span style="font-size:1rem">Get Started</span></span></a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind" href="/scaffold">Scaffold new app</a><a class="nav-item nav-item-h2 nav-item-last-of-its-kind" href="/add">Add to existing app</a><a class="nav-item nav-item-h1 nav-item-first-of-its-kind nav-item-last-of-its-kind"><span style="font-size:1.4em">📚<!-- --> <span style="font-size:1rem">Guides</span></span></a><a class="nav-item nav-item-h4 nav-item-first-of-its-kind nav-item-last-of-its-kind">Basics</a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind" href="/shield"><code>Abort()</code> &amp; <code>shield()</code></a><a class="nav-item nav-item-h2" href="/permissions">Permissions</a><a class="nav-item nav-item-h2" href="/auth">Authentication</a><a class="nav-item nav-item-h2 nav-item-last-of-its-kind" href="/file-structure">File Structure</a><a class="nav-item nav-item-h4 nav-item-first-of-its-kind nav-item-last-of-its-kind">More</a><a class="nav-item nav-item-h1 nav-item-first-of-its-kind nav-item-last-of-its-kind"><span style="font-size:1.4em">🔌<!-- --> <span style="font-size:1rem">Integration</span></span></a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind nav-item-last-of-its-kind" href="/typescript">TypeScript</a></div></div><div id="navigation-mask"></div><div id="page-container" class="doc-page"><div id="mobile-header" style="height:var(--mobile-header-height);width:100vw;position:relative"><div style="position:fixed;display:flex;align-items:center;background:white;z-index:999;top:0;left:0;height:var(--mobile-header-height);width:100%;border-bottom:1px solid #ddd"><div style="padding:20px;line-height:0" id="menu-toggle"><svg style="width:20px" class="icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/" style="color:inherit;display:flex;align-items:center;justify-content:left;text-decoration:none"><img src="/assets/telefunc.16ca9f51.svg" height="40" width="40"/><span style="font-size:1.55em;margin-left:6px;font-weight:600">Telefunc</span></a></div></div><div id="page-content"><h1>Tour</h1><blockquote><p>Alreay familiar with RPC? Only read the last sections:</p><ul><li><a href="#shield-abort"><code>shield()</code> &amp; <code>Abort()</code></a></li><li><a href="#inversion-of-control">Inversion of Control</a></li><li><a href="#typescript">TypeScript</a></li></ul></blockquote><h2>Hello World</h2><p>Telefunc enables functions defined on the server-side to be called remotely from the browser-side.</p><pre><code class="hljs language-js"><span class="hljs-comment">// hello.telefunc.js</span>
+        <div id="page-view"><div style="display:flex" data-reactroot=""><div id="navigation-container" style="flex-shrink:0;border-right:1px solid #eee"><div style="display:flex;flex-direction:column;align-items:center"><a id="navigation-header-logo" style="display:flex;align-items:center;color:inherit;justify-content:left;text-decoration:none;padding-top:20px;padding-bottom:11px" href="/"><img src="/assets/telefunc.16ca9f51.svg" height="55" width="55"/><span style="font-size:2.55em;margin-left:10px;font-weight:600">Telefunc</span></a><div style="display:flex;align-items:center;padding-top:0;justify-content:left"><a class="colorize-on-hover decolorize-4" href="https://github.com/vikejs/telefunc" style="padding:3px;display:inline-block;line-height:0"><img src="/assets/github.86a91340.svg" height="20"/></a><a class="colorize-on-hover decolorize-6" href="https://discord.com/invite/3DYWwk4xRQ" style="padding:3px;display:inline-block;line-height:0"><img src="/assets/discord.c14881e9.svg" height="20"/></a><a class="colorize-on-hover decolorize-7" href="https://twitter.com/brillout" style="padding:3px;display:inline-block;line-height:0"><img src="/assets/twitter.c1bd51e1.svg" height="20"/></a><a href="https://github.com/vikejs/telefunc/blob/master/CHANGELOG.md" class="button colorize-on-hover" style="display:flex;align-items:center;padding:1px 7px;margin-left:2px;font-size:0.97em;color:inherit"><span class="decolorize-7">v<!-- -->0.1.0-beta.1</span><img class="decolorize-6" src="/assets/changelog.062bdc49.svg" height="16" style="margin-left:5px"/></a></div></div><div id="navigation-content" style="position:relative"><a class="nav-item nav-item-h1 nav-item-first-of-its-kind nav-item-last-of-its-kind"><span style="font-size:1.4em"><img src="/assets/compass.023c5145.svg" style="vertical-align:text-top;font-size:1em;width:1.4em"/> <span style="font-size:1rem">Overview</span></span></a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind" href="/">Introduction</a><a class="nav-item nav-item-h2  is-active nav-item-last-of-its-kind" href="/tour">Tour</a><a class="nav-item nav-item-h3 nav-item-first-of-its-kind" href="#hello-world">Hello World</a><a class="nav-item nav-item-h3" href="#orm-sql">ORM &amp; SQL</a><a class="nav-item nav-item-h3" href="#how-it-works">How it works</a><a class="nav-item nav-item-h3" href="#telefunctions-need-protection">Telefunctions need protection</a><a class="nav-item nav-item-h3" href="#shield-abort"><code>shield()</code> &amp; <code>Abort()</code></a><a class="nav-item nav-item-h3" href="#authentication">Authentication</a><a class="nav-item nav-item-h3" href="#inversion-of-control">Inversion of control</a><a class="nav-item nav-item-h3 nav-item-last-of-its-kind" href="#typescript">TypeScript</a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind nav-item-last-of-its-kind" href="/RPC-vs-GraphQL-REST">RPC vs GraphQL/REST</a><a class="nav-item nav-item-h1 nav-item-first-of-its-kind nav-item-last-of-its-kind"><span style="font-size:1.4em">🌱<!-- --> <span style="font-size:1rem">Get Started</span></span></a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind" href="/scaffold">Scaffold new app</a><a class="nav-item nav-item-h2 nav-item-last-of-its-kind" href="/add">Add to existing app</a><a class="nav-item nav-item-h1 nav-item-first-of-its-kind nav-item-last-of-its-kind"><span style="font-size:1.4em">📚<!-- --> <span style="font-size:1rem">Guides</span></span></a><a class="nav-item nav-item-h4 nav-item-first-of-its-kind nav-item-last-of-its-kind">Basics</a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind" href="/shield"><code>Abort()</code> &amp; <code>shield()</code></a><a class="nav-item nav-item-h2" href="/permissions">Permissions</a><a class="nav-item nav-item-h2" href="/auth">Authentication</a><a class="nav-item nav-item-h2" href="/inversion-of-control">Inversion of Control</a><a class="nav-item nav-item-h2 nav-item-last-of-its-kind" href="/file-structure">File Structure</a><a class="nav-item nav-item-h4 nav-item-first-of-its-kind nav-item-last-of-its-kind">More</a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind nav-item-last-of-its-kind" href="/typescript">TypeScript</a><a class="nav-item nav-item-h1 nav-item-first-of-its-kind nav-item-last-of-its-kind"><span style="font-size:1.4em">🔌<!-- --> <span style="font-size:1rem">Integration</span></span></a></div></div><div id="navigation-mask"></div><div id="page-container" class="doc-page"><div id="mobile-header" style="height:var(--mobile-header-height);width:100vw;position:relative"><div style="position:fixed;display:flex;align-items:center;background:white;z-index:999;top:0;left:0;height:var(--mobile-header-height);width:100%;border-bottom:1px solid #ddd"><div style="padding:20px;line-height:0" id="menu-toggle"><svg style="width:20px" class="icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/" style="color:inherit;display:flex;align-items:center;justify-content:left;text-decoration:none"><img src="/assets/telefunc.16ca9f51.svg" height="40" width="40"/><span style="font-size:1.55em;margin-left:6px;font-weight:600">Telefunc</span></a></div></div><div id="page-content"><h1>Tour</h1><blockquote><p>Alreay familiar with RPC? Only read the last sections:</p><ul><li><a href="#shield-abort"><code>shield()</code> &amp; <code>Abort()</code></a></li><li><a href="#authentication">Authentication</a></li><li><a href="#inversion-of-control">Inversion of Control</a></li><li><a href="#typescript">TypeScript</a></li></ul></blockquote><h2>Hello World</h2><p>Telefunc enables functions defined on the server-side to be called remotely from the browser-side.</p><pre><code class="hljs language-js"><span class="hljs-comment">// hello.telefunc.js</span>
 <span class="hljs-comment">// Environment: Node.js server</span>
 
 <span class="hljs-keyword">export</span> { hello }
@@ -36,7 +36,7 @@
 
 <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getTodoItems</span>(<span class="hljs-params"></span>) </span>{
   <span class="hljs-comment">// With ORM</span>
-  <span class="hljs-keyword">const</span> todoItems = Todo.findAll({ <span class="hljs-attr">select</span>: <span class="hljs-string">&#x27;text&#x27;</span> })
+  <span class="hljs-keyword">const</span> todoItems = Todo.findMany({ <span class="hljs-attr">select</span>: <span class="hljs-string">&#x27;text&#x27;</span> })
 
   <span class="hljs-comment">// With SQL</span>
   <span class="hljs-keyword">const</span> todoItems = <span class="hljs-keyword">await</span> execute(<span class="hljs-string">&quot;SELECT text FROM todo_items;&quot;</span>)
@@ -121,7 +121,7 @@ app.use(<span class="hljs-string">&#x27;/_telefunc&#x27;</span>, <span class="hl
    &quot;path&quot;: &quot;/hello.telefunc.js:hello&quot;,
    &quot;args&quot;: [{&quot;name&quot;: &quot;Alice&quot;}]
  }&#x27;</span>
- https://our-website.com/_telefunc</code></pre><p>Therefore, the following is a bad idea.</p><pre><code class="hljs language-js"><span class="hljs-comment">// run.telefunc.js</span>
+ https://our-website.com/_telefunc</code></pre><p>Therefore, the following is not safe.</p><pre><code class="hljs language-js"><span class="hljs-comment">// run.telefunc.js</span>
 <span class="hljs-comment">// Environment: Node.js</span>
 
 <span class="hljs-keyword">export</span> { run }
@@ -197,7 +197,7 @@ app.use(<span class="hljs-string">&#x27;*&#x27;</span>, <span class="hljs-keywor
   <span class="hljs-keyword">const</span> authorId = user.id
 
   <span class="hljs-comment">// With ORM</span>
-  <span class="hljs-keyword">const</span> todoItems = Todo.findAll({ <span class="hljs-attr">select</span>: <span class="hljs-string">&#x27;text&#x27;</span>, authorId })
+  <span class="hljs-keyword">const</span> todoItems = Todo.findMany({ <span class="hljs-attr">select</span>: <span class="hljs-string">&#x27;text&#x27;</span>, authorId })
 
   <span class="hljs-comment">// With SQL</span>
   <span class="hljs-keyword">const</span> todoItems = <span class="hljs-keyword">await</span> execute(
@@ -206,7 +206,92 @@ app.use(<span class="hljs-string">&#x27;*&#x27;</span>, <span class="hljs-keywor
   )
 
   <span class="hljs-keyword">return</span> todoItems
-}</code></pre><p>More at <a href="/permissions">Guides<!-- --> &gt; <!-- -->Permissions</a>.</p><h2>Inversion of control</h2><p>In a classical REST/GraphQL, it is the backend who determines &amp; controls the structure of the API.</p><p>With the Telefunc it&#x27;s the other way around: it is the frontend who determines &amp; controls telefunctions.</p><h2>TypeScript</h2><p>Telefunc works with TypeScript out-of-the-box.</p><pre><code class="hljs language-ts"><span class="hljs-comment">// UserSettings.telefunc.js</span>
+}</code></pre><p>More at <a href="/permissions">Guides<!-- --> &gt; <!-- -->Permissions</a>.</p><h2>Inversion of control</h2><p>Coming from the REST/GraphQL world, we may be tempted to implement generic Telefunctions.</p><pre><code class="hljs language-js"><span class="hljs-comment">// todo.telefunc.js</span>
+<span class="hljs-comment">// Environment: Node.js</span>
+
+<span class="hljs-keyword">import</span> { shield } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;telefunc&#x27;</span>
+<span class="hljs-keyword">const</span> t = shield.type
+
+<span class="hljs-comment">// Generic telefunctions about the data model `Todo`.</span>
+
+shield(getTodoItems, [t.boolean])
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getTodoItems</span>(<span class="hljs-params">isCompleted</span>) </span>{
+  <span class="hljs-keyword">const</span> todoItems = Todo.findMany({ isCompleted })
+  <span class="hljs-keyword">return</span> todoItems
+}
+
+shield(updateTodoItem, [t.number, t.string, t.boolean])
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">updateTodoItem</span>(<span class="hljs-params">id, text, isCompleted</span>) </span>{
+  <span class="hljs-keyword">const</span> todoItem = Todo.findOne({ id })
+  todoItem.text = text
+  todoItem.isCompleted = isCompleted
+  <span class="hljs-keyword">await</span> todoItem.save()
+}</code></pre><pre><code class="hljs language-js"><span class="hljs-comment">// user.telefunc.js</span>
+
+<span class="hljs-keyword">import</span> { getContext } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;telefunc&#x27;</span>
+
+<span class="hljs-comment">// Generic telefunctions about the data model `User`.</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getUserData</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> { user } = getContext()
+  <span class="hljs-comment">// All data that the frontend may need</span>
+  <span class="hljs-keyword">const</span> { firstName, lastName, age<span class="hljs-comment">/*, ...*/</span> } = user
+  <span class="hljs-keyword">return</span> { firstName, lastName, age<span class="hljs-comment">/*, ...*/</span> }
+}</code></pre><p>But this is not idiomatic for Telefunc.
+With Telefunc, we define telefunctions tailored to frontend components instead.</p><pre><code class="hljs language-js"><span class="hljs-comment">// TodoList.telefunc.js</span>
+
+<span class="hljs-comment">// This file provides the telefunctions that `TodoList.jsx` needs.</span>
+
+<span class="hljs-keyword">import</span> { getContext } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;telefunc&#x27;</span>
+
+<span class="hljs-keyword">export</span> { getInitialData }
+
+<span class="hljs-comment">// This returns exactly what `TodoList` needs.</span>
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getInitialData</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> { user } = getContext()
+
+  <span class="hljs-comment">// `TodoList.jsx` only shows non-completed to-dos.</span>
+  <span class="hljs-keyword">const</span> todoItems = <span class="hljs-keyword">await</span> Todo.findMany({ <span class="hljs-attr">isCompleted</span>: <span class="hljs-literal">false</span> })
+
+  <span class="hljs-comment">// `TodoList.jsx` only needs `firstName`</span>
+  <span class="hljs-keyword">const</span> { firstName } = user
+
+  <span class="hljs-keyword">return</span> {
+    <span class="hljs-attr">user</span>: { firstName },
+    todoItems
+  }
+}</code></pre><pre><code class="hljs language-js"><span class="hljs-comment">// UserProfile.telefunc.js</span>
+
+<span class="hljs-comment">// Telefunctions for `UserProfile.jsx`.</span>
+
+<span class="hljs-keyword">import</span> { getContext } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;telefunc&#x27;</span>
+
+<span class="hljs-keyword">export</span> { getInitialData }
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getInitialData</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> { user } = getContext()
+  <span class="hljs-comment">// `UserProfile.jsx` needs all user data.</span>
+  <span class="hljs-keyword">const</span> userProfile = { ...user }
+  <span class="hljs-keyword">delete</span> userProfile.password
+  <span class="hljs-keyword">return</span> { userProfile }
+}</code></pre><pre><code class="hljs language-js"><span class="hljs-comment">// TodoItem.telefunc.js</span>
+
+<span class="hljs-comment">// One telefunction per &lt;TodoItem /&gt; event</span>
+
+shield(onTextChange, [t.number, t.string])
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onTextChange</span>(<span class="hljs-params">id, text</span>) </span>{
+  <span class="hljs-keyword">const</span> todoItem = Todo.findOne({ id })
+  todoItem.text = text
+  <span class="hljs-keyword">await</span> todoItem.save()
+}
+
+shield(onCompleteToggle, [t.number, t.string])
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onCompleteToggle</span>(<span class="hljs-params">id</span>) </span>{
+  <span class="hljs-keyword">const</span> todoItem = Todo.findOne({ id })
+  todoItem.isCompleted = !todoItem.isCompleted
+  <span class="hljs-keyword">await</span> todoItem.save()
+}</code></pre><p>The telefunctions in <code>TodoItem.telefunc.js</code> are determined by <code>TodoItem.jsx</code>;
+it is the frontend developer/development that owns the telefunctions.</p><p>This is the opposite of GraphQL/REST where is the the backend developer/development that owns the GraphQL/RESTful API.</p><p>This inversion of control leads to a clearer seperation of concerns.</p><p>More at <a href="/inversion-of-control">Guides<!-- --> &gt; <!-- -->Inversion of Control</a>.</p><h2>TypeScript</h2><p>Telefunc works with TypeScript out-of-the-box.</p><pre><code class="hljs language-ts"><span class="hljs-comment">// UserSettings.telefunc.js</span>
 <span class="hljs-comment">// Environment: Node.js server</span>
 
 <span class="hljs-keyword">import</span> { shield } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;telefunc&#x27;</span>
@@ -220,9 +305,9 @@ shield(onUserSettingsChange, [
     { <span class="hljs-attr">name</span>: t.value(<span class="hljs-string">&#x27;age&#x27;</span>), <span class="hljs-attr">newVal</span>: t.number },
   )
 )
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onUserSettingChange</span>(<span class="hljs-params">{ name, newVal }</span>) </span>{
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onUserSettingChange</span>(<span class="hljs-params">{ name, newVal }</span>) </span>{
   <span class="hljs-keyword">if</span> (name === <span class="hljs-string">&#x27;firstName&#x27;</span>) {
-    <span class="hljs-comment">// Note that `shield()` infers `onUserSettingsChange`&#x27;s arguments.</span>
+    <span class="hljs-comment">// Note that `shield()` infers `onUserSettingsChange`&#x27;s type.</span>
     <span class="hljs-comment">// This means that TypeScript knows that `newVal` is a string here.</span>
     newVal++ <span class="hljs-comment">// TypeScript will complain</span>
   }
@@ -233,8 +318,8 @@ shield(onUserSettingsChange, [
 }</code></pre><pre><code class="hljs language-tsx"><span class="hljs-comment">// UserSettings.jsx</span>
 <span class="hljs-comment">// Environment: Browser</span>
 
-<span class="hljs-comment">// The trick is that TypeScript believes that `UserSettings.telefunc.js` is imported.</span>
-<span class="hljs-comment">// This means that `onUserSettingChange()` as exactly the type we defined.</span>
+<span class="hljs-comment">// TypeScript believes that `UserSettings.telefunc.js` is imported. This</span>
+<span class="hljs-comment">// means that `onUserSettingChange()` has exactly the type we defined.</span>
 <span class="hljs-keyword">import</span> { onUserSettingChange } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./UserSettings.telefunc.js&#x27;</span>
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">UserSettings</span>(<span class="hljs-params"></span>) </span>{
@@ -260,6 +345,6 @@ shield(onUserSettingsChange, [
       <span class="hljs-tag">&lt;/<span class="hljs-name">input</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></span>
   )
-}</code></pre><p>More at <a href="/typescript">Integration<!-- --> &gt; <!-- -->TypeScript</a>.</p><div style="margin-top:50px"><a href="https://github.com/vikejs/telefunc/edit/master/docs/pages/tour.page.mdx">✍<!-- --> Edit this page</a></div></div></div></div></div>
+}</code></pre><p>More at <a href="/typescript">Guides<!-- --> &gt; <!-- -->TypeScript</a>.</p><div style="margin-top:50px"><a href="https://github.com/vikejs/telefunc/edit/master/docs/pages/tour.page.mdx">✍<!-- --> Edit this page</a></div></div></div></div></div>
       <script type="module" src="/assets/renderer/_default.page.client.ts.7f9eb940.js"></script><script id="vite-plugin-ssr_pageContext" type="application/json">{"pageContext":{"_pageId":"/pages/tour"}}</script></body>
     </html>
