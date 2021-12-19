@@ -90,7 +90,7 @@ but note that Telefunc works with any UI framework (React, Vue, Svelte, ...).</p
     <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></span>
   )
 }</code></pre><p>This means our frontend can directly tap into the power of our SQL/ORM engine. This is both simpler and more powerful than REST/GraphQL.</p><blockquote><p>We need a GraphQL/RESTful API if, and only if:</p><ul><li>There are third party frontends/clients that need to be able to access our database.</li><li>Or we need to be able to deploy our frontend and backend independently of each other.</li></ul><p>Otherwise RPC/Telefunc is simpler and more powerful.
-More at <a href="/RPC-vs-GraphQL-REST">Overview<!-- --> &gt; <!-- -->RPC vs GraphQL/REST</a>.</p></blockquote><h2>How it works</h2><blockquote><p>Understanding the basic mechanics of Telefunc is paramount in order to properly use Telefunc.</p></blockquote><p>Let&#x27;s see what happens when we call a telefunction in the browser.</p><pre><code class="hljs language-js"><span class="hljs-comment">// Environment: Browser</span>
+See <a href="/RPC-vs-GraphQL-REST">Overview<!-- --> &gt; <!-- -->RPC vs GraphQL/REST</a>.</p></blockquote><h2>How it works</h2><blockquote><p>Understanding the basic mechanics of Telefunc is paramount in order to properly use Telefunc.</p></blockquote><p>Let&#x27;s see what happens when we call a telefunction in the browser.</p><pre><code class="hljs language-js"><span class="hljs-comment">// Environment: Browser</span>
 
 <span class="hljs-keyword">import</span> { hello } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./hello.telefunc.js&#x27;</span>
 
@@ -296,7 +296,7 @@ we usually define telefunctions tailored to frontend components.</p><pre><code c
 <span class="hljs-keyword">import</span> { shield } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;telefunc&#x27;</span>
 <span class="hljs-keyword">const</span> t = shield.type
 
-<span class="hljs-comment">// Common Telefunc practice: we create one telefunction per user event.</span>
+<span class="hljs-comment">// Common Telefunc practice: one telefunction per user event.</span>
 
 <span class="hljs-comment">// When the user modifies the text of a to-do item</span>
 shield(onTextChange, [t.number, t.string])
