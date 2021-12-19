@@ -29,8 +29,8 @@
       <span class="hljs-built_in">console</span>.log(message) <span class="hljs-comment">// Prints &#x27;Welcome Eva&#x27;</span>
     </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></pre><p>Telefunctions such as <code>hello()</code> are <em>always</em> called on the server-side,
-which means that telefunctions are able to run SQL/ORM queries.</p><blockquote><p>This practice of remotely calling functions is called <em>RPC</em> (Remote Procedure Call).</p></blockquote><h2>ORM &amp; SQL</h2><p>In essence, Telefunc enables our frontend to use any SQL/ORM queries.</p><pre><code class="hljs language-js"><span class="hljs-comment">// todo.telefunc.js</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></pre><p>Telefunctions such as <code>hello()</code> always run on the server-side.</p><blockquote><p>This practice of calling functions remotely is called <em>RPC</em> (Remote Procedure Call).</p></blockquote><h2>ORM &amp; SQL</h2><p>Because they are always run on the server-side,
+telefunctions are able to run SQL/ORM queries.</p><p>This, in essence, enables our frontend to use SQL/ORM queries.</p><pre><code class="hljs language-js"><span class="hljs-comment">// TodoList.telefunc.js</span>
 <span class="hljs-comment">// Environment: Node.js</span>
 
 <span class="hljs-keyword">export</span> { getTodoItems }
@@ -42,20 +42,22 @@ which means that telefunctions are able to run SQL/ORM queries.</p><blockquote><
   <span class="hljs-keyword">const</span> todoItems = <span class="hljs-keyword">await</span> execute(<span class="hljs-string">&quot;SELECT text FROM todo_items;&quot;</span>)
 
   <span class="hljs-keyword">return</span> todoItems
-}</code></pre><pre><code class="hljs language-jsx"><span class="hljs-comment">// Environment: Browser</span>
+}</code></pre><pre><code class="hljs language-jsx"><span class="hljs-comment">// TodoList.jsx</span>
+<span class="hljs-comment">// Environment: Browser</span>
 
-<span class="hljs-keyword">import</span> { getTodoItems } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./todo.telefunc.js&#x27;</span>
+<span class="hljs-keyword">import</span> { getTodoItems } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./TodoList.telefunc.js&#x27;</span>
 
 <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">TodoList</span>(<span class="hljs-params"></span>) </span>{
-  <span class="hljs-comment">// Our frontend can use the telefunction `getTodoItems()` to fetch data.</span>
+  <span class="hljs-comment">// Our frontend uses the telefunction `getTodoItems()` to execute a SQL/ORM query that</span>
+  <span class="hljs-comment">// retrieves the data it needs.</span>
   <span class="hljs-keyword">const</span> todoItems = <span class="hljs-keyword">await</span> getTodoItems()
   <span class="hljs-keyword">return</span> (
     <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>{ todoItems.map(item =&gt;
       <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>{ item.text }<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
     )}<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></span>
   )
-}</code></pre><blockquote><p>The example uses JSX
-but note that Telefunc works with any UI framework (React, Vue, Svelte, ...).</p></blockquote><p>Our frontend can also use telefunctions to mutate data.</p><pre><code class="hljs language-js"><span class="hljs-comment">// todo.telefunc.js</span>
+}</code></pre><blockquote><p>Note how we collocate and name <code>TodoList.telefunc.js</code> after <code>TodoList.jsx</code>; it&#x27;s a practice we&#x27;ll talk about later.</p></blockquote><blockquote><p>Our examples uses JSX
+but note that Telefunc works with any UI framework (React, Vue, Svelte, ...).</p></blockquote><p>Our frontend can also use telefunctions to mutate data.</p><pre><code class="hljs language-js"><span class="hljs-comment">// CreateTodo.telefunc.js</span>
 <span class="hljs-comment">// Environment: Node.js</span>
 
 <span class="hljs-keyword">export</span> { onNewTodo }
@@ -70,9 +72,10 @@ but note that Telefunc works with any UI framework (React, Vue, Svelte, ...).</p
     <span class="hljs-string">&quot;INSERT INTO todo_items VALUES (:text)&quot;</span>,
     { text }
   )
-}</code></pre><blockquote><p>Our <code>onNewTodo</code> telefunction is missing a <code>shield(onNewTodo, [t.string])</code> protection, which we&#x27;ll talk about in a moment.</p></blockquote><pre><code class="hljs language-jsx"><span class="hljs-comment">// Environment: Browser</span>
+}</code></pre><blockquote><p>This <code>onNewTodo</code> telefunction is missing a <code>shield(onNewTodo, [t.string])</code> protection, which we&#x27;ll talk about in a moment.</p></blockquote><pre><code class="hljs language-jsx"><span class="hljs-comment">// CreateTodo.jsx</span>
+<span class="hljs-comment">// Environment: Browser</span>
 
-<span class="hljs-keyword">import</span> { onNewTodo } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./todo.telefunc.js&#x27;</span>
+<span class="hljs-keyword">import</span> { onNewTodo } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./CreateTodo.telefunc.js&#x27;</span>
 
 <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onClick</span>(<span class="hljs-params">form</span>) </span>{
   <span class="hljs-keyword">const</span> text = form.input.value
@@ -86,9 +89,8 @@ but note that Telefunc works with any UI framework (React, Vue, Svelte, ...).</p
       <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{onClick}</span>&gt;</span>Add To-Do<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></span>
   )
-}</code></pre><p>This means our frontend can fully tap into the power of our SQL/ORM engine. This is both simpler and more powerful than REST/GraphQL.</p><blockquote><p>We need GraphQL or REST only if a) we have third parties that access our database, or b) we need to decouple frontend-backend deployment.
-Otherwise RPC is both simpler and more powerful.
-More at <a href="/RPC-vs-GraphQL-REST">Overview<!-- --> &gt; <!-- -->RPC vs GraphQL/REST</a>.</p></blockquote><h2>How it works</h2><blockquote><p>Understanding the basic mechanics of Telefunc is paramount in order to properly protect our telefunctions.</p></blockquote><p>Let&#x27;s see what happens when we call a telefunction in the browser.</p><pre><code class="hljs language-js"><span class="hljs-comment">// Environment: Browser</span>
+}</code></pre><p>This means our frontend can directly tap into the power of our SQL/ORM engine. This is both simpler and more powerful than REST/GraphQL.</p><blockquote><p>We need a GraphQL/RESTful API if, and only if:</p><ul><li>There are third party frontends/clients that need to be able to access our database.</li><li>Or we need to be able to deploy our frontend and backend independently of each other.</li></ul><p>Otherwise RPC/Telefunc is simpler and more powerful.
+More at <a href="/RPC-vs-GraphQL-REST">Overview<!-- --> &gt; <!-- -->RPC vs GraphQL/REST</a>.</p></blockquote><h2>How it works</h2><blockquote><p>Understanding the basic mechanics of Telefunc is paramount in order to properly use Telefunc.</p></blockquote><p>Let&#x27;s see what happens when we call a telefunction in the browser.</p><pre><code class="hljs language-js"><span class="hljs-comment">// Environment: Browser</span>
 
 <span class="hljs-keyword">import</span> { hello } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;hello.telefunc.js&#x27;</span>
 
@@ -156,7 +158,7 @@ the following telefunction is not safe.</p><pre><code class="hljs language-js"><
 
   <span class="hljs-keyword">return</span> <span class="hljs-keyword">await</span> database.execute(sql)
 }</code></pre><p>Also, since telefunctions are public and can be called by anyone, we cannot assuming anything about the arguments type.
-We could use <code>Abort()</code> again:</p><pre><code class="hljs language-js"><span class="hljs-comment">// onNewTodo.telefunc.js</span>
+We could use <code>Abort()</code> again:</p><pre><code class="hljs language-js"><span class="hljs-comment">// CreateTodo.telefunc.js</span>
 <span class="hljs-comment">// Environment: Node.js</span>
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onNewTodo</span>(<span class="hljs-params">text</span>) </span>{
@@ -171,7 +173,7 @@ We could use <code>Abort()</code> again:</p><pre><code class="hljs language-js">
   <span class="hljs-keyword">const</span> todoItem = <span class="hljs-keyword">new</span> Todo({ text })
 
   <span class="hljs-comment">/* ...*/</span>
-}</code></pre><p>But for more complex arguments, <code>Abort()</code> is cumbersome:</p><pre><code class="hljs language-js"><span class="hljs-comment">// onNewTodo.telefunc.js</span>
+}</code></pre><p>But for more complex arguments, <code>Abort()</code> is cumbersome:</p><pre><code class="hljs language-js"><span class="hljs-comment">// CreateTodo.telefunc.js</span>
 <span class="hljs-comment">// Environment: Node.js</span>
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onNewTodo</span>(<span class="hljs-params">args</span>) </span>{
@@ -184,7 +186,7 @@ We could use <code>Abort()</code> again:</p><pre><code class="hljs language-js">
   }
   <span class="hljs-keyword">const</span> { text, isCompleted } = args
   <span class="hljs-comment">/* ... */</span>
-}</code></pre><p>We can use <code>shield()</code> instead:</p><pre><code class="hljs language-js"><span class="hljs-comment">// onNewTodo.telefunc.js</span>
+}</code></pre><p>We can use <code>shield()</code> instead:</p><pre><code class="hljs language-js"><span class="hljs-comment">// CreateTodo.telefunc.js</span>
 <span class="hljs-comment">// Environment: Node.js</span>
 
 <span class="hljs-keyword">import</span> { shield } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;telefunc&#x27;</span>
@@ -206,7 +208,7 @@ app.use(<span class="hljs-string">&#x27;*&#x27;</span>, <span class="hljs-keywor
 
   <span class="hljs-comment">// We make `user` available to our telefunctions</span>
   setContext({ user })
-})</code></pre><pre><code class="hljs language-js"><span class="hljs-comment">// todo.telefunc.js</span>
+})</code></pre><pre><code class="hljs language-js"><span class="hljs-comment">// TodoList.telefunc.js</span>
 <span class="hljs-comment">// Environment: Node.js</span>
 
 <span class="hljs-keyword">import</span> { getContext } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;telefunc&#x27;</span>
