@@ -161,13 +161,15 @@ the following telefunction is problematic.</p><pre><code class="hljs language-js
   <span class="hljs-comment">// We&#x27;ll talk about `getContext()` later</span>
   <span class="hljs-keyword">const</span> { user } = getContext()
 
-  <span class="hljs-comment">// Only Admins are allowed to run this telefunction</span>
+  <span class="hljs-comment">// Only admins are allowed to run this telefunction</span>
   <span class="hljs-keyword">if</span> (user.isAdmin !== <span class="hljs-literal">true</span>) {
     <span class="hljs-keyword">throw</span> Abort()
   }
 
   <span class="hljs-keyword">return</span> <span class="hljs-keyword">await</span> database.execute(sql)
-}</code></pre><p>Also, since telefunctions are public and can be called by anyone, we cannot assuming anything about the arguments type.
+}</code></pre><p>Also,
+since telefunctions are public and can be called by anyone,
+we cannot assuming anything about the arguments type.
 We could use <code>Abort()</code> again:</p><pre><code class="hljs language-js"><span class="hljs-comment">// CreateTodo.telefunc.js</span>
 <span class="hljs-comment">// Environment: Node.js</span>
 
