@@ -1,4 +1,4 @@
 <svg width="47.02" height="47.02" version="1.1" viewBox="0 0 47.02 47.02" xmlns="http://www.w3.org/2000/svg">
- <ellipse cx="23.51" cy="23.51" rx="21.354" ry="21.95" fill="#f7e018" stroke="#31343d" stroke-linejoin="round" stroke-width="3.12" style="paint-order:normal"/>
+ <circle cx="23.51" cy="23.51" r="21.95" fill="#f7e018" stroke="#31343d" stroke-linejoin="round" stroke-width="3.12" style="paint-order:normal"/>
  <path d="m15.094 33.516 7.008-10.505-7.008-10.506h5.256l14.015 21.011h-5.2555l-4.3797-6.5657-4.3806 6.5657z" fill="#31343d" stroke="#31343d" stroke-width="1.283"/>
 </svg>
