@@ -2,31 +2,48 @@
     <html>
       <head>
         <link rel="icon" href="/assets/telefunc.87b90d19.svg" />
-        <title>Permissions | Telefunc</title>
+        <title>Permissions &amp; Validation | Telefunc</title>
         
         <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
       <link rel="stylesheet" type="text/css" href="/assets/P.fd0351a7.css"><link rel="preload" as="font" crossorigin type="font/ttf" href="/assets/Inter-Var.2bc54814.ttf"><link rel="modulepreload" as="script" type="text/javascript" href="/assets/P.fc9133b0.js"></head>
       <body>
-        <div id="page-view"><div style="display:flex" data-reactroot=""><div id="navigation-container" style="flex-shrink:0;border-right:1px solid #eee"><div style="display:flex;flex-direction:column;align-items:center"><a id="navigation-header-logo" style="display:flex;align-items:center;color:inherit;justify-content:left;text-decoration:none;padding-top:20px;padding-bottom:11px" href="/"><img src="/assets/telefunc.87b90d19.svg" height="55" width="55"/><span style="font-size:2.55em;margin-left:10px;font-weight:600">Telefunc</span></a><div style="display:flex;align-items:center;padding-top:0;justify-content:left"><a class="colorize-on-hover decolorize-4" href="https://github.com/vikejs/telefunc" style="padding:3px;display:inline-block;line-height:0"><img src="/assets/github.86a91340.svg" height="20"/></a><a class="colorize-on-hover decolorize-6" href="https://discord.com/invite/3DYWwk4xRQ" style="padding:3px;display:inline-block;line-height:0"><img src="/assets/discord.c14881e9.svg" height="20"/></a><a class="colorize-on-hover decolorize-7" href="https://twitter.com/brillout" style="padding:3px;display:inline-block;line-height:0"><img src="/assets/twitter.c1bd51e1.svg" height="20"/></a><a href="https://github.com/vikejs/telefunc/blob/master/CHANGELOG.md" class="button colorize-on-hover" style="display:flex;align-items:center;padding:1px 7px;margin-left:2px;font-size:0.97em;color:inherit"><span class="decolorize-7">v<!-- -->0.1.0-beta.1</span><img class="decolorize-6" src="/assets/changelog.062bdc49.svg" height="16" style="margin-left:5px"/></a></div></div><div id="navigation-content" style="position:relative"><a class="nav-item nav-item-h1 nav-item-first-of-its-kind nav-item-last-of-its-kind"><span style="font-size:1.4em"><img src="/assets/compass.023c5145.svg" style="vertical-align:text-top;font-size:1em;width:1.4em"/> <span style="font-size:1rem">Overview</span></span></a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind" href="/">Introduction</a><a class="nav-item nav-item-h2" href="/tour">Tour</a><a class="nav-item nav-item-h2 nav-item-last-of-its-kind" href="/RPC-vs-GraphQL-REST">RPC vs GraphQL/REST</a><a class="nav-item nav-item-h1 nav-item-first-of-its-kind nav-item-last-of-its-kind"><span style="font-size:1.4em">🌱<!-- --> <span style="font-size:1rem">Get Started</span></span></a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind" href="/scaffold">Scaffold new app</a><a class="nav-item nav-item-h2 nav-item-last-of-its-kind" href="/add">Add to existing app</a><a class="nav-item nav-item-h1 nav-item-first-of-its-kind nav-item-last-of-its-kind"><span style="font-size:1.4em">📚<!-- --> <span style="font-size:1rem">Guides</span></span></a><a class="nav-item nav-item-h4 nav-item-first-of-its-kind nav-item-last-of-its-kind">Basics</a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind" href="/shield"><code>Abort()</code> &amp; <code>shield()</code></a><a class="nav-item nav-item-h2  is-active nav-item-last-of-its-kind" href="/permissions">Permissions</a><a class="nav-item nav-item-h3 nav-item-first-of-its-kind" href="#abort"><code>Abort()</code></a><a class="nav-item nav-item-h3" href="#telefunctions-are-public">Telefunctions are public</a><a class="nav-item nav-item-h3 nav-item-last-of-its-kind" href="#abort-or-return"><code>Abort()</code> or <code>return</code></a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind" href="/auth">Authentication</a><a class="nav-item nav-item-h2" href="/inversion-of-control">Inversion of Control</a><a class="nav-item nav-item-h2 nav-item-last-of-its-kind" href="/file-structure">File Structure</a><a class="nav-item nav-item-h4 nav-item-first-of-its-kind nav-item-last-of-its-kind">More</a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind" href="/typescript">TypeScript</a><a class="nav-item nav-item-h2 nav-item-last-of-its-kind" href="/telefunc-server">Telefunc Server</a><a class="nav-item nav-item-h1 nav-item-first-of-its-kind nav-item-last-of-its-kind"><span style="font-size:1.4em">🔌<!-- --> <span style="font-size:1rem">Integration</span></span></a></div></div><div id="navigation-mask"></div><div id="page-container" class="doc-page"><div id="mobile-header" style="height:var(--mobile-header-height);width:100vw;position:relative"><div style="position:fixed;display:flex;align-items:center;background:white;z-index:999;top:0;left:0;height:var(--mobile-header-height);width:100%;border-bottom:1px solid #ddd"><div style="padding:20px;line-height:0" id="menu-toggle"><svg style="width:20px" class="icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/" style="color:inherit;display:flex;align-items:center;justify-content:left;text-decoration:none"><img src="/assets/telefunc.87b90d19.svg" height="40" width="40"/><span style="font-size:1.55em;margin-left:6px;font-weight:600">Telefunc</span></a></div></div><div id="page-content"><h1>Permissions</h1><p>TODO</p><blockquote><p>Telefunctions are public and need protection.
-If you don&#x27;t know why that is, then check out <a href="/tour">Overview<!-- --> &gt; <!-- -->Tour</a>.</p></blockquote><h2><code>Abort()</code></h2><p>We define permissions by using <code>throw new Abort()</code>.</p><pre><code class="hljs language-js"><span class="hljs-comment">// posts.telefunc.js</span>
+        <div id="page-view"><div style="display:flex" data-reactroot=""><div id="navigation-container" style="flex-shrink:0;border-right:1px solid #eee"><div style="display:flex;flex-direction:column;align-items:center"><a id="navigation-header-logo" style="display:flex;align-items:center;color:inherit;justify-content:left;text-decoration:none;padding-top:20px;padding-bottom:11px" href="/"><img src="/assets/telefunc.87b90d19.svg" height="55" width="55"/><span style="font-size:2.55em;margin-left:10px;font-weight:600">Telefunc</span></a><div style="display:flex;align-items:center;padding-top:0;justify-content:left"><a class="colorize-on-hover decolorize-4" href="https://github.com/vikejs/telefunc" style="padding:3px;display:inline-block;line-height:0"><img src="/assets/github.86a91340.svg" height="20"/></a><a class="colorize-on-hover decolorize-6" href="https://discord.com/invite/3DYWwk4xRQ" style="padding:3px;display:inline-block;line-height:0"><img src="/assets/discord.c14881e9.svg" height="20"/></a><a class="colorize-on-hover decolorize-7" href="https://twitter.com/brillout" style="padding:3px;display:inline-block;line-height:0"><img src="/assets/twitter.c1bd51e1.svg" height="20"/></a><a href="https://github.com/vikejs/telefunc/blob/master/CHANGELOG.md" class="button colorize-on-hover" style="display:flex;align-items:center;padding:1px 7px;margin-left:2px;font-size:0.97em;color:inherit"><span class="decolorize-7">v<!-- -->0.1.0-beta.1</span><img class="decolorize-6" src="/assets/changelog.062bdc49.svg" height="16" style="margin-left:5px"/></a></div></div><div id="navigation-content" style="position:relative"><a class="nav-item nav-item-h1 nav-item-first-of-its-kind nav-item-last-of-its-kind"><span style="font-size:1.4em"><img src="/assets/compass.023c5145.svg" style="vertical-align:text-top;font-size:1em;width:1.4em"/> <span style="font-size:1rem">Overview</span></span></a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind" href="/">Introduction</a><a class="nav-item nav-item-h2" href="/tour">Tour</a><a class="nav-item nav-item-h2 nav-item-last-of-its-kind" href="/RPC-vs-GraphQL-REST">RPC vs GraphQL/REST</a><a class="nav-item nav-item-h1 nav-item-first-of-its-kind nav-item-last-of-its-kind"><span style="font-size:1.4em">🌱<!-- --> <span style="font-size:1rem">Get Started</span></span></a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind" href="/scaffold">Scaffold new app</a><a class="nav-item nav-item-h2 nav-item-last-of-its-kind" href="/add">Add to existing app</a><a class="nav-item nav-item-h1 nav-item-first-of-its-kind nav-item-last-of-its-kind"><span style="font-size:1.4em">📚<!-- --> <span style="font-size:1rem">Guides</span></span></a><a class="nav-item nav-item-h4 nav-item-first-of-its-kind nav-item-last-of-its-kind">Basics</a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind" href="/shield"><code>Abort()</code> &amp; <code>shield()</code></a><a class="nav-item nav-item-h2  is-active nav-item-last-of-its-kind" href="/permissions">Permissions &amp; Validation</a><a class="nav-item nav-item-h3 nav-item-first-of-its-kind" href="#with-abort">With <code>Abort()</code></a><a class="nav-item nav-item-h3" href="#with-return">With <code>return</code></a><a class="nav-item nav-item-h3 nav-item-last-of-its-kind" href="#form-validation">Form Validation</a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind" href="/auth">Authentication</a><a class="nav-item nav-item-h2" href="/inversion-of-control">Inversion of Control</a><a class="nav-item nav-item-h2 nav-item-last-of-its-kind" href="/file-structure">File Structure</a><a class="nav-item nav-item-h4 nav-item-first-of-its-kind nav-item-last-of-its-kind">More</a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind" href="/typescript">TypeScript</a><a class="nav-item nav-item-h2 nav-item-last-of-its-kind" href="/telefunc-server">Telefunc Server</a><a class="nav-item nav-item-h1 nav-item-first-of-its-kind nav-item-last-of-its-kind"><span style="font-size:1.4em">🔌<!-- --> <span style="font-size:1rem">Integration</span></span></a></div></div><div id="navigation-mask"></div><div id="page-container" class="doc-page"><div id="mobile-header" style="height:var(--mobile-header-height);width:100vw;position:relative"><div style="position:fixed;display:flex;align-items:center;background:white;z-index:999;top:0;left:0;height:var(--mobile-header-height);width:100%;border-bottom:1px solid #ddd"><div style="padding:20px;line-height:0" id="menu-toggle"><svg style="width:20px" class="icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/" style="color:inherit;display:flex;align-items:center;justify-content:left;text-decoration:none"><img src="/assets/telefunc.87b90d19.svg" height="40" width="40"/><span style="font-size:1.55em;margin-left:6px;font-weight:600">Telefunc</span></a></div></div><div id="page-content"><h1>Permissions &amp; Validation</h1><blockquote><p>We recommend taking the <a href="/tour">Telefunc Tour</a> before reading this document.</p></blockquote><h2>With <code>Abort()</code></h2><pre><code class="hljs language-js"><span class="hljs-comment">// Comment.telefunc.js</span>
 <span class="hljs-comment">// Environment: Node.js</span>
 
-<span class="hljs-keyword">import</span> { getContext, Abort } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;telefunc&#x27;</span>
+<span class="hljs-keyword">import</span> { getContext, Abort, shield } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;telefunc&#x27;</span>
 
-<span class="hljs-keyword">export</span> { deletePost }
+shield(onCommentDelete, [shield.type.number])
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onCommentDelete</span>(<span class="hljs-params">id</span>) </span>{
+  <span class="hljs-keyword">const</span> { user } = getContext()
 
-<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">deletePost</span>(<span class="hljs-params">id</span>) </span>{
-  <span class="hljs-comment">// See the guide &quot;Authentication&quot; for an introduction about `getContext()`</span>
-  <span class="hljs-keyword">const</span> context = getContext()
-
-  <span class="hljs-comment">// Only admins should be able to delete posts</span>
-  <span class="hljs-keyword">if</span>( !context.user?.isAdmin ) {
-    <span class="hljs-comment">// The user is not an admin — we abort</span>
-    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Abort()
+  <span class="hljs-comment">// Only admins are allowed to delete comments</span>
+  <span class="hljs-keyword">if</span> (!user.isAdmin) {
+    <span class="hljs-keyword">throw</span> Abort()
   }
 
   <span class="hljs-comment">// ...</span>
-}</code></pre><h2>Telefunctions are public</h2><h2><code>Abort()</code> or <code>return</code></h2><p>There are situations where we don&#x27;t want to <code>Abort()</code> upon wrong permissions. For example:</p><pre><code class="hljs language-js"><span class="hljs-comment">// todo.telefunc.js</span>
+}</code></pre><pre><code class="hljs language-jsx"><span class="hljs-comment">// Comment.jsx</span>
+<span class="hljs-comment">// Environment: Browser</span>
+
+<span class="hljs-keyword">import</span> { onCommentDelete } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./Comment.telefunc.js&#x27;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Comment</span>(<span class="hljs-params">{ id, text, context }</span>) </span>{
+  <span class="hljs-keyword">const</span> deleteButton =
+    context.user.isAdmin ?
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> onCommentDelete(id)}&gt;Delete<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span> :
+      <span class="hljs-literal">null</span> <span class="hljs-comment">// We only show the delete button to admins</span>
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{ text }<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    { deleteButton }
+  <span class="hljs-tag">&lt;/&gt;</span></span>
+}</code></pre><p>The delete button is only shown to admins;
+this means that whenever our frontend calls <code>onCommentDelete()</code>
+we can assume the user to be an admin.</p><p>But we still need <code>Abort()</code>:
+as we have seen in the <a href="/tour">Telefunc Tour</a>,
+our telefunctions can be called not only by our frontend but really by anyone.
+A malicious user can try to call <code>onCommentDelete()</code> without admin priviledges but,
+thanks to our <code>throw Abort()</code>,
+the call will be aborted.</p><p>In other words, we use <code>Abort()</code> to protect against unexpected calls (calls not originating from out frontend, or if our frontend has a bug).</p><p>If is expected that our frontend can sometimes make calls without the right permissions, we <code>return</code> instead of <code>throw Abort()</code>.</p><h2>With <code>return</code></h2><pre><code class="hljs language-js"><span class="hljs-comment">// *.telefunc.js</span>
 <span class="hljs-comment">// Environment: Node.js</span>
 
 <span class="hljs-keyword">import</span> { getContext } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;telefunc&#x27;</span>
@@ -34,32 +51,34 @@ If you don&#x27;t know why that is, then check out <a href="/tour">Overview<!-- 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getTodoList</span>(<span class="hljs-params"></span>) </span>{
   <span class="hljs-keyword">const</span> { user } = getContext()
 
-  <span class="hljs-comment">// The user is not logged in</span>
-  <span class="hljs-keyword">if</span>( !user ) {
-    <span class="hljs-comment">// It is expected that the user may not be logged-in (for example when the user&#x27;s session</span>
-    <span class="hljs-comment">// expires). We `return { isNotLoggedIn: true }` instead of `throw new Abort()` so that</span>
-    <span class="hljs-comment">// the frontend know what&#x27;s going on and can redirect the user to the login page.</span>
+  <span class="hljs-keyword">if</span> (!user) {
+    <span class="hljs-comment">// It is expected that the user may not be logged-in. We `return { isNotLoggedIn: true }`</span>
+    <span class="hljs-comment">// instead of `throw Abort()` so that the frontend can redirect the user to the login page.</span>
     <span class="hljs-keyword">return</span> { <span class="hljs-attr">isNotLoggedIn</span> : <span class="hljs-literal">true</span> }
   }
 
   <span class="hljs-comment">// ...</span>
-}</code></pre><p>Note that Telefunc doesn&#x27;t provide finer-grained exceptions (<code>NotLoggedIn</code>, <code>InvalidFormInput</code>, ...) because for fine-grain control we simply return JavaScript values instead of throwing exceptions.</p><p>We either <code>throw new Abort()</code> or <code>return someValue</code>.</p><p>Note how <code>shield()</code> and <code>Abort()</code> work well together.</p><pre><code class="hljs language-js"><span class="hljs-comment">// onNewTodo.telefunc.js</span>
+}</code></pre><p>In contrast to our previous telefunction <code>onCommentDelete()</code>,
+here we expect our frontend to sometimes call <code>getTodoList()</code> without the right permissions;
+we then <code>return</code> the information that the user is not logged-in to the frontend,
+so that the frontend can react accordingly.</p><p>In general, we can <code>return</code> instead of <code>throw Abort()</code> to pass information to the frontend.</p><h2>Form Validation</h2><p>It is expected that the user enters invalid form inputs; the frontend then usually reports back to the user what went wrong;
+we <code>return</code> instead of <code>throw Abort()</code>.</p><pre><code class="hljs language-js"><span class="hljs-comment">// *.telefunc.js</span>
 <span class="hljs-comment">// Environment: Node.js</span>
 
-<span class="hljs-keyword">import</span> { shield, getContext } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;telefunc&#x27;</span>
+<span class="hljs-keyword">import</span> { shield } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;telefunc&#x27;</span>
 
-<span class="hljs-comment">// We use `shield()` to ensure arugments types.</span>
-shield(onNewTodo, [shield.type.string])
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onNewTodo</span>(<span class="hljs-params">text</span>) </span>{
-  <span class="hljs-keyword">const</span> { user } = getContext()
-
-  <span class="hljs-comment">// We use `Abort()` to, essentially, define permissions.</span>
-  <span class="hljs-keyword">if</span>( user === <span class="hljs-literal">null</span> ) {
-     <span class="hljs-comment">// Only authenticated users can create a new to-do.</span>
-     <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Abort()
+shield(onFormSubmit, [{ <span class="hljs-attr">email</span>: t.string }])
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onFormSubmit</span>(<span class="hljs-params">{ email }</span>) </span>{
+  <span class="hljs-keyword">const</span> invalidInputs = {}
+  <span class="hljs-keyword">if</span> (!email) {
+    invalidInputs.firstName = <span class="hljs-string">&#x27;Please enter your email.&#x27;</span>
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!email.includes(<span class="hljs-string">&#x27;@&#x27;</span>)) {
+    invalidInputs.firstName = <span class="hljs-string">&#x27;Invalid email; make sure to enter a valid email.&#x27;</span>
   }
-
-  <span class="hljs-comment">/* ... */</span>
+  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">Object</span>.keys(invalidInputs).length &gt; <span class="hljs-number">0</span>) {
+    <span class="hljs-keyword">return</span> { invalidInputs }
+  }
+  <span class="hljs-comment">// ...</span>
 }</code></pre><div style="margin-top:50px"><a href="https://github.com/vikejs/telefunc/edit/master/docs/pages/permissions.page.mdx">✍<!-- --> Edit this page</a></div></div></div></div></div>
       <script type="module" src="/assets/renderer/_default.page.client.ts.5abc4a87.js"></script><script id="vite-plugin-ssr_pageContext" type="application/json">{"pageContext":{"_pageId":"/pages/permissions"}}</script></body>
     </html>
