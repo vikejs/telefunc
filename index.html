@@ -17,8 +17,8 @@
 <span class="hljs-comment">// remotely callable from the browser.</span>
 <span class="hljs-keyword">export</span> { onNewTodo }
 
-shield(onNewTodo, [shield.type.string])
-<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onNewTodo</span>(<span class="hljs-params">text</span>) </span>{
+shield(onNewTodo, [{ <span class="hljs-attr">text</span>: shield.type.string }])
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onNewTodo</span>(<span class="hljs-params">{ text }</span>) </span>{
   <span class="hljs-keyword">const</span> { user } = getContext()
   <span class="hljs-keyword">if</span> (user === <span class="hljs-literal">null</span>) <span class="hljs-keyword">throw</span> Abort()
 
