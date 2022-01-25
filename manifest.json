@@ -8,14 +8,14 @@
     ]
   },
   "pages/index/index.page.client.ts": {
-    "file": "assets/pages/index/index.page.client.ts.c52328f1.js",
+    "file": "assets/pages/index/index.page.client.ts.8922ed8c.js",
     "src": "pages/index/index.page.client.ts",
     "isEntry": true,
     "imports": [
       "_DocSearch.78acbe8a.js"
     ],
     "css": [
-      "assets/pages/index/index.page.client.ts.f1e0b86b.css"
+      "assets/pages/index/index.page.client.ts.d5fbc612.css"
     ]
   },
   "_DocSearch.78acbe8a.js": {
