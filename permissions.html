@@ -108,7 +108,8 @@ we don&#x27;t have to re-implement the same logic over and over again.</p><pre><
 to solidify permissions.</p><pre><code class="hljs language-js"><span class="hljs-comment">// components/Comment.telefunc.js</span>
 <span class="hljs-comment">// Environment: Node.js</span>
 
-<span class="hljs-keyword">import</span> { getContext, Abort, shield } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;telefunc&#x27;</span>
+<span class="hljs-keyword">import</span> { getUser } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;../auth/getUser&#x27;</span>
+<span class="hljs-keyword">import</span> { shield } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;telefunc&#x27;</span>
 
 shield(onCommentDelete, [shield.type.number])
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onCommentDelete</span>(<span class="hljs-params">id</span>) </span>{
@@ -118,20 +119,20 @@ shield(onCommentDelete, [shield.type.number])
 }</code></pre><pre><code class="hljs language-js"><span class="hljs-comment">// auth/getUser.ts</span>
 <span class="hljs-comment">// Environment: Node.js</span>
 
-<span class="hljs-comment">// Note that `auth/getUser.ts` is not a `.telefunc.js` file.</span>
+<span class="hljs-comment">// Note that `auth/getUser.ts` is not a `.telefunc.js` file and `getUser()` not a telefunction</span>
 <span class="hljs-keyword">export</span> { getUser }
 
 <span class="hljs-keyword">import</span> { Abort, getContext } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;telefunc&#x27;</span>
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getUser</span>(<span class="hljs-params">{ permission }</span>) </span>{
   <span class="hljs-keyword">const</span> { user } = getContext()
-  <span class="hljs-keyword">if</span> (!user) <span class="hljs-keyword">throw</span> Abort()
-
+  <span class="hljs-keyword">if</span> (!user) {
+    <span class="hljs-keyword">throw</span> Abort()
+  }
   <span class="hljs-keyword">if</span> (permission === <span class="hljs-string">&#x27;admin&#x27;</span>) {
     <span class="hljs-keyword">if</span> (!user.isAdmin) <span class="hljs-keyword">throw</span> Abort()
     <span class="hljs-keyword">return</span> user
   }
-
   <span class="hljs-keyword">if</span> (permission === <span class="hljs-string">&#x27;public&#x27;</span>) {
     <span class="hljs-keyword">return</span> user
   }
@@ -152,14 +153,13 @@ shield(onTextChange, [{ <span class="hljs-attr">text</span>: shield.type.string 
 
 <span class="hljs-keyword">export</span> { findTodoItem }
 
-<span class="hljs-keyword">import</span> { Abort, getContext } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;telefunc&#x27;</span>
+<span class="hljs-keyword">import</span> { getContext, Abort } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;telefunc&#x27;</span>
 
 <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">findTodoItem</span>(<span class="hljs-params">props, { permission }</span>) </span>{
   <span class="hljs-comment">// For increased safety, we ensure that a `permission` is always provided.</span>
   <span class="hljs-keyword">if</span> (!permission) {
     <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">&#x27;Wrong findTodoItem() usage: missing permission&#x27;</span>)
   }
-
   <span class="hljs-comment">// For increased safety, we make sure there are no typos.</span>
   <span class="hljs-keyword">if</span> (![<span class="hljs-string">&#x27;public&#x27;</span>, <span class="hljs-string">&#x27;author&#x27;</span>, <span class="hljs-string">&#x27;admin&#x27;</span>].includes(permission)) {
     <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">&#x27;Wrong findTodoItem() usage: unknown permission &#x27;</span> + permission)
