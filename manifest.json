@@ -7,6 +7,14 @@
       "_DocSearch.78acbe8a.js"
     ]
   },
+  "../libframe/docs/_default.page.client.ts": {
+    "file": "assets/node_modules/libframe-docs/_default.page.client.ts.d1ab34d6.js",
+    "src": "../libframe/docs/_default.page.client.ts",
+    "isEntry": true,
+    "imports": [
+      "_DocSearch.78acbe8a.js"
+    ]
+  },
   "pages/index/index.page.client.ts": {
     "file": "assets/pages/index/index.page.client.ts.8922ed8c.js",
     "src": "pages/index/index.page.client.ts",
