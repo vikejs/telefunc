@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+    <html>
+      <head>
+        <link rel="icon" href="/assets/telefunc-favicon.81ab4dbf.svg" />
+        <title>The SSR context problem | Telefunc</title>
+        
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+        
+      <link rel="stylesheet" type="text/css" href="/assets/DocSearch.750ca6e9.css"><link rel="preload" as="font" crossorigin type="font/ttf" href="/assets/Inter-Var.2bc54814.ttf"><link rel="modulepreload" as="script" type="text/javascript" href="/assets/DocSearch.78acbe8a.js"></head>
+      <body>
+        <div id="page-view"><div style="display:flex;justify-content:center" class="doc-page"><div id="navigation-wrapper"><div id="navigation-container"><div style="display:flex;flex-direction:column;align-items:center;margin-bottom:-5px"><a id="navigation-header-logo" style="display:flex;align-items:center;color:inherit;justify-content:left;text-decoration:none;padding-top:12px;padding-bottom:7px" href="/"><img src="/assets/telefunc.6a5581b5.svg" height="55" width="55"/><span style="font-size:2.55em;margin-left:7px;font-weight:600">Telefunc</span></a><div style="display:flex;align-items:center;padding-top:0;justify-content:left"><a class="colorize-on-hover decolorize-4" href="https://github.com/vikejs/telefunc" style="padding:3px;display:inline-block;line-height:0"><img src="/assets/github.86a91340.svg" height="20"/></a><a class="colorize-on-hover decolorize-6" href="https://discord.com/invite/3DYWwk4xRQ" style="padding:3px;display:inline-block;line-height:0"><img src="/assets/discord.c14881e9.svg" height="20"/></a><a class="colorize-on-hover decolorize-7" href="https://twitter.com/brillout" style="padding:3px;display:inline-block;line-height:0"><img src="/assets/twitter.c1bd51e1.svg" height="20"/></a><div id="docsearch-desktop"></div><a href="https://github.com/vikejs/telefunc/blob/master/CHANGELOG.md" class="button colorize-on-hover" style="display:flex;align-items:center;padding:1px 7px;margin-left:2px;font-size:0.97em;color:inherit"><span class="decolorize-7">v<!-- -->0.1.10</span><img class="decolorize-6" src="/assets/changelog.062bdc49.svg" height="16" style="margin-left:5px"/></a></div></div><div style="background-color:var(--background-color);text-align:left;margin-left:10px;margin-right:10px;margin-top:30px;margin-bottom:-8px;border-radius:5px;padding:10px"><span style="font-family:emoji">ℹ</span> <b><em>Detached</em></b><span style="opacity:0.8"> <!-- -->— this page is not listed in the navigation menu.</span></div><div id="navigation-content" style="position:relative"><a class="nav-item nav-item-h1 nav-item-first-of-its-kind nav-item-last-of-its-kind"><span style="font-size:1.4em"><img src="/assets/compass.023c5145.svg" style="vertical-align:text-top;font-size:1em;width:1.4em"/> <span style="font-size:1rem">Overview</span></span></a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind" href="/">Introduction</a><a class="nav-item nav-item-h2" href="/tour">Tour</a><a class="nav-item nav-item-h2 nav-item-last-of-its-kind" href="/RPC-vs-GraphQL-REST">RPC vs GraphQL/REST</a><a class="nav-item nav-item-h1 nav-item-first-of-its-kind nav-item-last-of-its-kind"><span style="font-size:1.4em">🌱<!-- --> <span style="font-size:1rem">Get started</span></span></a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind" href="/vite">Vite</a><a class="nav-item nav-item-h2" href="/next">Next.js</a><a class="nav-item nav-item-h2" href="/nuxt">Nuxt</a><a class="nav-item nav-item-h2 nav-item-last-of-its-kind" href="/install">Other</a><a class="nav-item nav-item-h1 nav-item-first-of-its-kind nav-item-last-of-its-kind"><span style="font-size:1.4em">📚<!-- --> <span style="font-size:1rem">Guides</span></span></a><a class="nav-item nav-item-h4 nav-item-first-of-its-kind nav-item-last-of-its-kind">Basics</a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind" href="/abort-shield"><code>Abort()</code> &amp; <code>shield()</code></a><a class="nav-item nav-item-h2" href="/auth">Authentication</a><a class="nav-item nav-item-h2" href="/permissions">Permissions</a><a class="nav-item nav-item-h2" href="/file-structure">File structure</a><a class="nav-item nav-item-h2 nav-item-last-of-its-kind" href="/form-validation">Form validation</a><a class="nav-item nav-item-h4 nav-item-first-of-its-kind nav-item-last-of-its-kind">More</a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind" href="/typescript">TypeScript</a><a class="nav-item nav-item-h2" href="/telefunc-server">Telefunc Server</a><a class="nav-item nav-item-h2" href="/waterfalls">Waterfalls</a><a class="nav-item nav-item-h2 nav-item-last-of-its-kind" href="/ssr">Server-Side Rendering (SSR)</a><a class="nav-item nav-item-h1 nav-item-first-of-its-kind nav-item-last-of-its-kind"><span style="font-size:1.4em">⚙<!-- --> <span style="font-size:1rem">API</span></span></a><a class="nav-item nav-item-h4 nav-item-first-of-its-kind nav-item-last-of-its-kind">Protection</a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind" href="/shield"><code>shield()</code></a><a class="nav-item nav-item-h2 nav-item-last-of-its-kind" href="/Abort"><code>Abort()</code></a><a class="nav-item nav-item-h4 nav-item-first-of-its-kind nav-item-last-of-its-kind">Context</a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind" href="/getContext"><code>getContext()</code></a><a class="nav-item nav-item-h2 nav-item-last-of-its-kind" href="/provideTelefuncContext"><code>provideTelefuncContext()</code></a><a class="nav-item nav-item-h4 nav-item-first-of-its-kind nav-item-last-of-its-kind">Integration</a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind" href="/createTelefuncCaller"><code>createTelefuncCaller()</code></a><a class="nav-item nav-item-h2 nav-item-last-of-its-kind" href="/config"><code>config</code></a></div></div><div id="navigation-mask"></div></div><div id="page-wrapper"><div id="page-container"><div id="mobile-header" style="height:var(--mobile-header-height);width:100vw;position:relative"><div style="position:fixed;display:flex;align-items:center;background:white;z-index:99;top:0;left:0;height:var(--mobile-header-height);width:100%;border-bottom:1px solid #ddd"><div style="padding:20px;line-height:0" id="menu-toggle"><svg style="width:20px" class="icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/" style="color:inherit;display:flex;align-items:center;justify-content:left;text-decoration:none"><img src="/assets/telefunc.6a5581b5.svg" height="40" width="40"/><span style="font-size:1.55em;margin-left:6px;font-weight:600">Telefunc</span></a><div id="docsearch-mobile"></div></div></div><div id="page-content"><h1>The SSR context problem</h1><blockquote><p>This is <strong>advanced documentation</strong>.
+You may need experience with Telefunc (or RPC) before being able to fully internalize the problem described here.</p><p><strong>You likely don&#x27;t need to read this</strong>; skimming through <a href="/ssr">Guides<!-- --> &gt; <!-- -->Server-Side Rendering (SSR)</a> is usually enough.</p></blockquote><h2 id="server-side-calls-vs-browser-side-calls">Server-side calls VS browser-side calls</h2><p>We usually call telefunctions remotely from the browser:</p><pre><code class="hljs language-js"><span class="hljs-comment">// CreateTodo.telefunc.js</span>
+<span class="hljs-comment">// Environment: Node.js server</span>
+
+<span class="hljs-keyword">import</span> { shield } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;telefunc&#x27;</span>
+
+shield(onNewTodo, [shield.type.string])
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onNewTodo</span>(<span class="hljs-params">text</span>) </span>{
+  <span class="hljs-keyword">const</span> todoItem = <span class="hljs-keyword">new</span> Todo({ text })
+  <span class="hljs-keyword">await</span> todoItem.save()
+}</code></pre><pre><code class="hljs language-jsx"><span class="hljs-comment">// CreateTodo.jsx</span>
+<span class="hljs-comment">// Environment: Browser</span>
+
+<span class="hljs-comment">// As usual, the Telefunc transformer replaces this import with a thin HTTP client</span>
+<span class="hljs-keyword">import</span> { onNewTodo } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./CreateTodo.telefunc.js&#x27;</span>
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onClick</span>(<span class="hljs-params">form</span>) </span>{
+  <span class="hljs-keyword">const</span> text = form.input.value
+  <span class="hljs-comment">// We call `onNewTodo()` remotely from the browser</span>
+  <span class="hljs-keyword">await</span> onNewTodo({ text })
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">CreateTodo</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">input</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">input</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{onClick}</span>&gt;</span>Add To-Do<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></span>
+  )
+}</code></pre><p>But, when we do Server-Side Rendering,
+we may call telefunctions directly on the server-side instead of doing a remote call from the browser:</p><pre><code class="hljs language-js"><span class="hljs-comment">// components/TodoList.telefunc.js</span>
+<span class="hljs-comment">// Environment: Node.js server</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getTodoItems</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> todoItems = <span class="hljs-keyword">await</span> Todo.findMany()
+  <span class="hljs-keyword">return</span> todoItems
+}</code></pre><pre><code class="hljs language-js"><span class="hljs-comment">// server/index.js</span>
+<span class="hljs-comment">// Environment: Node.js (not browser!)</span>
+
+<span class="hljs-keyword">import</span> { renderToHtml } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;some-ui-framework&#x27;</span> <span class="hljs-comment">// React, Vue, ...</span>
+<span class="hljs-keyword">import</span> { TodoList } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;../components/TodoList.js&#x27;</span> <span class="hljs-comment">// A `&lt;TodoList /&gt;` component</span>
+
+<span class="hljs-comment">// If we would be on the browser-side, the Telefunc transfomer would replace this import</span>
+<span class="hljs-comment">// with a thin HTTP client. But because we are on the server-side, the Telefunc transformer</span>
+<span class="hljs-comment">// doesn&#x27;t touch this import and leaves it as it is. This means that calling `getTodoItems()`</span>
+<span class="hljs-comment">// here will directly call the function `getTodoItems()` defined in `TodoList.telefunc.js`.</span>
+<span class="hljs-keyword">import</span> { getTodoItems } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;../components/TodoList.telefunc&#x27;</span>
+
+<span class="hljs-comment">// Upon HTTP GET `/todoList` requests, our server renders the `&lt;TodoList /&gt;` component to HTML</span>
+app.get(<span class="hljs-string">&#x27;/todoList&#x27;</span>, <span class="hljs-keyword">async</span> (req, res) =&gt; {
+  <span class="hljs-keyword">const</span> todoItems = <span class="hljs-keyword">await</span> getTodoItems() <span class="hljs-comment">// Calling our telefunction on the server-side</span>
+  <span class="hljs-keyword">const</span> viewHtml = <span class="hljs-keyword">await</span> renderToHtml(TodoList, { todoItems })
+  res.status(<span class="hljs-number">200</span>).send(html`<span class="xml"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>My to-do List<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;view&quot;</span>&gt;</span></span><span class="hljs-subst">${viewHtml}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>`</span>
+  )
+})</code></pre><h2 id="the-problem">The problem</h2><p>As we have seen in the previous section, we can call our telefunctions as well on the server-side.</p><p>But things can get tricky if one of our telefunction uses <code>getContext()</code>.</p><p>Let&#x27;s use <code>getContext()</code> in the example of the previous section:</p><pre><code class="hljs language-js"><span class="hljs-comment">// components/TodoList.telefunc.js</span>
+<span class="hljs-comment">// Environment: Node.js server</span>
+
+<span class="hljs-keyword">import</span> { getContext } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;telefunc&#x27;</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getTodoItems</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> { user } = getContext()
+  <span class="hljs-keyword">const</span> todoItems = <span class="hljs-keyword">await</span> Todo.findMany({ <span class="hljs-attr">authorId</span>: user.id })
+  <span class="hljs-keyword">return</span> todoItems
+}</code></pre><pre><code class="hljs language-js"><span class="hljs-comment">// server/index.js</span>
+<span class="hljs-comment">// Environment: Node.js (not browser!)</span>
+
+<span class="hljs-keyword">import</span> { getTodoItems } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;../components/TodoList.telefunc&#x27;</span>
+
+<span class="hljs-keyword">import</span> { renderToHtml } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;some-ui-framework&#x27;</span>
+<span class="hljs-keyword">import</span> { TodoList } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;../components/TodoList.js&#x27;</span>
+
+<span class="hljs-comment">// The usual Telefunc middleware</span>
+app.all(<span class="hljs-string">&#x27;/_telefunc&#x27;</span>, <span class="hljs-keyword">async</span> (req, res) =&gt; {
+  provideTelefuncContext({ <span class="hljs-attr">user</span>: req.user }) <span class="hljs-comment">// See https://telefunc.com/auth</span>
+  <span class="hljs-keyword">const</span> httpResponse = <span class="hljs-keyword">await</span> telefunc({ <span class="hljs-attr">url</span>: req.url, <span class="hljs-attr">method</span>: req.method, <span class="hljs-attr">body</span>: req.body })
+  res.status(httpResponse.statusCode).type(httpResponse.contentType).send(httpResponse.body)
+})
+
+<span class="hljs-comment">// Our SSR middleware</span>
+app.get(<span class="hljs-string">&#x27;/todoList&#x27;</span>, <span class="hljs-keyword">async</span> (req, res) =&gt; {
+  <span class="hljs-comment">// We also need to call `provideTelefuncContext()` here, because the `provideTelefuncContext()`</span>
+  <span class="hljs-comment">// in the Telefunc middleware above is only called when a telefunction is called remotely</span>
+  <span class="hljs-comment">// from the browser.</span>
+  provideTelefuncContext({ <span class="hljs-attr">user</span>: req.user })
+  <span class="hljs-keyword">const</span> todoItems = <span class="hljs-keyword">await</span> getTodoItems() <span class="hljs-comment">// Calling our telefunction on the server-side</span>
+  <span class="hljs-keyword">const</span> viewHtml = <span class="hljs-keyword">await</span> renderToHtml(TodoList, { todoItems })
+  res.status(<span class="hljs-number">200</span>).send(html`<span class="xml"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span></span><span class="hljs-subst">${req.user.name}</span><span class="xml">&#x27;s to-do List<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;view&quot;</span>&gt;</span></span><span class="hljs-subst">${viewHtml}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>`</span>
+  )
+})</code></pre><p>In this example, the solution is simple: we can simply call <code>provideTelefuncContext()</code> before our server-side telefunction call.</p><p>But, in a real application, this is usually cumbersome, and sometimes difficult to achieve. This is what we call <em>the SSR context problem</em>.</p><p>For a list of solutions, see <a href="/ssr">Guides<!-- --> &gt; <!-- -->Server-Side Rendering (SSR)</a>.</p><div style="margin-top:50px"><a href="https://github.com/vikejs/telefunc/edit/master/docs/pages/ssr-context.page.mdx">✍<!-- --> Edit this page</a></div></div></div></div></div></div>
+        
+      <script type="module" src="/assets/renderer/_default.page.client.ts.81d7c904.js"></script><script id="vite-plugin-ssr_pageContext" type="application/json">{"pageContext":{"_pageId":"/pages/ssr-context"}}</script></body>
+    </html>
