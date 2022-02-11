@@ -14,20 +14,23 @@
 <span class="hljs-keyword">import</span> { shield } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;telefunc&#x27;</span>
 <span class="hljs-keyword">const</span> t = shield.type
 
-shield(onFormSubmit, [email: t.string, <span class="hljs-attr">password</span>: t.string])
+shield(onFormSubmit, [t.string, t.string])
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onFormSubmit</span>(<span class="hljs-params">email, password</span>) </span>{
   <span class="hljs-comment">// Form validation</span>
   <span class="hljs-keyword">const</span> invalidInputs = {}
+
   <span class="hljs-keyword">if</span> (!email) {
     invalidInputs.email = <span class="hljs-string">&#x27;Please enter your email.&#x27;</span>
   } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (!email.includes(<span class="hljs-string">&#x27;@&#x27;</span>)) {
     invalidInputs.email = <span class="hljs-string">&#x27;Invalid email; make sure to enter a valid email.&#x27;</span>
   }
+
   <span class="hljs-keyword">if</span> (!password) {
     invalidInputs.password = <span class="hljs-string">&#x27;Please enter a password.&#x27;</span>
-  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (password.length&lt;<span class="hljs-number">8</span>) {
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (password.length &lt; <span class="hljs-number">8</span>) {
     invalidInputs.password = <span class="hljs-string">&#x27;Password is too short: it should have at least 8 charachters.&#x27;</span>
   }
+
   <span class="hljs-keyword">if</span> (<span class="hljs-built_in">Object</span>.keys(invalidInputs).length &gt; <span class="hljs-number">0</span>) {
     <span class="hljs-comment">// Instead of `throw Abort()`</span>
     <span class="hljs-keyword">return</span> { invalidInputs }
@@ -38,7 +41,7 @@ shield(onFormSubmit, [email: t.string, <span class="hljs-attr">password</span>: 
   <span class="hljs-keyword">await</span> user.save()
 
   <span class="hljs-keyword">return</span> { user }
-}</code></pre><p>We could also use <code>throw Abort({ invalidInputs })</code> but <code>return { invalidInputs }</code> is usually more convenient.</p><div style="margin-top:50px"><a href="https://github.com/vikejs/telefunc/edit/master/docs/pages/form-validation.page.mdx">✍<!-- --> Edit this page</a></div></div></div></div></div></div>
+}</code></pre><blockquote><p>We could also use <code>throw Abort({ invalidInputs })</code> but <code>return { invalidInputs }</code> is usually more convenient for form validation.</p></blockquote><div style="margin-top:50px"><a href="https://github.com/vikejs/telefunc/edit/master/docs/pages/form-validation.page.mdx">✍<!-- --> Edit this page</a></div></div></div></div></div></div>
         
       <script type="module" src="/assets/renderer/_default.page.client.ts.81d7c904.js"></script><script id="vite-plugin-ssr_pageContext" type="application/json">{"pageContext":{"_pageId":"/pages/form-validation"}}</script></body>
     </html>
