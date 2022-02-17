@@ -6,401 +6,504 @@
         
         <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
         
-      <link rel="stylesheet" type="text/css" href="/assets/DocSearch.750ca6e9.css"><link rel="preload" as="font" crossorigin type="font/ttf" href="/assets/Inter-Var.2bc54814.ttf"><link rel="modulepreload" as="script" type="text/javascript" href="/assets/DocSearch.78acbe8a.js"></head>
+      <link rel="stylesheet" type="text/css" href="/assets/DocSearch.0d2287ca.css"><link rel="preload" as="font" crossorigin type="font/ttf" href="/assets/Inter-Var.2bc54814.ttf"><link rel="modulepreload" as="script" type="text/javascript" href="/assets/DocSearch.78acbe8a.js"></head>
       <body>
-        <div id="page-view"><div style="display:flex;justify-content:center" class="doc-page"><div id="navigation-wrapper"><div id="navigation-container"><div style="display:flex;flex-direction:column;align-items:center;margin-bottom:-5px"><a id="navigation-header-logo" style="display:flex;align-items:center;color:inherit;justify-content:left;text-decoration:none;padding-top:12px;padding-bottom:7px" href="/"><img src="/assets/telefunc.6a5581b5.svg" height="55" width="55"/><span style="font-size:2.55em;margin-left:7px;font-weight:600">Telefunc</span></a><div style="display:flex;align-items:center;padding-top:0;justify-content:left"><a class="colorize-on-hover decolorize-4" href="https://github.com/vikejs/telefunc" style="padding:3px;display:inline-block;line-height:0"><img src="/assets/github.86a91340.svg" height="20"/></a><a class="colorize-on-hover decolorize-6" href="https://discord.com/invite/3DYWwk4xRQ" style="padding:3px;display:inline-block;line-height:0"><img src="/assets/discord.c14881e9.svg" height="20"/></a><a class="colorize-on-hover decolorize-7" href="https://twitter.com/brillout" style="padding:3px;display:inline-block;line-height:0"><img src="/assets/twitter.c1bd51e1.svg" height="20"/></a><div id="docsearch-desktop"></div><a href="https://github.com/vikejs/telefunc/blob/master/CHANGELOG.md" class="button colorize-on-hover" style="display:flex;align-items:center;padding:1px 7px;margin-left:2px;font-size:0.97em;color:inherit"><span class="decolorize-7">v<!-- -->0.1.12</span><img class="decolorize-6" src="/assets/changelog.062bdc49.svg" height="16" style="margin-left:5px"/></a></div></div><div id="navigation-content" style="position:relative"><a class="nav-item nav-item-h1 nav-item-first-of-its-kind nav-item-last-of-its-kind"><span style="font-size:1.4em"><img src="/assets/compass.023c5145.svg" style="vertical-align:text-top;font-size:1em;width:1.4em"/> <span style="font-size:1rem">Overview</span></span></a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind" href="/">Introduction</a><a class="nav-item nav-item-h2  is-active  is-active-first nav-item-last-of-its-kind" href="/tour">Tour</a><a class="nav-item nav-item-h3  is-active nav-item-first-of-its-kind" href="#hello-world">Hello world</a><a class="nav-item nav-item-h3  is-active" href="#orm-sql">ORM &amp; SQL</a><a class="nav-item nav-item-h3  is-active" href="#how-it-works">How it works</a><a class="nav-item nav-item-h3  is-active" href="#telefunctions-need-protection">Telefunctions need protection</a><a class="nav-item nav-item-h3  is-active" href="#abort-shield"><code>Abort()</code> &amp; <code>shield()</code></a><a class="nav-item nav-item-h3  is-active" href="#authentication-permissions">Authentication &amp; permissions</a><a class="nav-item nav-item-h3  is-active" href="#inversion-of-control">Inversion of control</a><a class="nav-item nav-item-h3  is-active  is-active-last nav-item-last-of-its-kind" href="#typescript">TypeScript</a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind nav-item-last-of-its-kind" href="/RPC-vs-GraphQL-REST">RPC vs GraphQL/REST</a><a class="nav-item nav-item-h1 nav-item-first-of-its-kind nav-item-last-of-its-kind"><span style="font-size:1.4em">🌱<!-- --> <span style="font-size:1rem">Get started</span></span></a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind" href="/vite">Vite</a><a class="nav-item nav-item-h2" href="/next">Next.js</a><a class="nav-item nav-item-h2" href="/nuxt">Nuxt</a><a class="nav-item nav-item-h2 nav-item-last-of-its-kind" href="/install">Other</a><a class="nav-item nav-item-h1 nav-item-first-of-its-kind nav-item-last-of-its-kind"><span style="font-size:1.4em">📚<!-- --> <span style="font-size:1rem">Guides</span></span></a><a class="nav-item nav-item-h4 nav-item-first-of-its-kind nav-item-last-of-its-kind">Basics</a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind" href="/abort-shield"><code>Abort()</code> &amp; <code>shield()</code></a><a class="nav-item nav-item-h2" href="/auth">Authentication</a><a class="nav-item nav-item-h2" href="/permissions">Permissions</a><a class="nav-item nav-item-h2" href="/file-structure">File structure</a><a class="nav-item nav-item-h2 nav-item-last-of-its-kind" href="/form-validation">Form validation</a><a class="nav-item nav-item-h4 nav-item-first-of-its-kind nav-item-last-of-its-kind">More</a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind" href="/typescript">TypeScript</a><a class="nav-item nav-item-h2" href="/telefunc-server">Telefunc Server</a><a class="nav-item nav-item-h2" href="/waterfalls">Waterfalls</a><a class="nav-item nav-item-h2 nav-item-last-of-its-kind" href="/ssr">Server-Side Rendering (SSR)</a><a class="nav-item nav-item-h1 nav-item-first-of-its-kind nav-item-last-of-its-kind"><span style="font-size:1.4em">⚙<!-- --> <span style="font-size:1rem">API</span></span></a><a class="nav-item nav-item-h4 nav-item-first-of-its-kind nav-item-last-of-its-kind">Protection</a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind" href="/shield"><code>shield()</code></a><a class="nav-item nav-item-h2 nav-item-last-of-its-kind" href="/Abort"><code>Abort()</code></a><a class="nav-item nav-item-h4 nav-item-first-of-its-kind nav-item-last-of-its-kind">Context</a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind" href="/getContext"><code>getContext()</code></a><a class="nav-item nav-item-h2 nav-item-last-of-its-kind" href="/provideTelefuncContext"><code>provideTelefuncContext()</code></a><a class="nav-item nav-item-h4 nav-item-first-of-its-kind nav-item-last-of-its-kind">Integration</a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind" href="/createTelefuncCaller"><code>createTelefuncCaller()</code></a><a class="nav-item nav-item-h2 nav-item-last-of-its-kind" href="/config"><code>config</code></a></div></div><div id="navigation-mask"></div></div><div id="page-wrapper"><div id="page-container"><div id="mobile-header" style="height:var(--mobile-header-height);width:100vw;position:relative"><div style="position:fixed;display:flex;align-items:center;background:white;z-index:99;top:0;left:0;height:var(--mobile-header-height);width:100%;border-bottom:1px solid #ddd"><div style="padding:20px;line-height:0" id="menu-toggle"><svg style="width:20px" class="icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/" style="color:inherit;display:flex;align-items:center;justify-content:left;text-decoration:none"><img src="/assets/telefunc.6a5581b5.svg" height="40" width="40"/><span style="font-size:1.55em;margin-left:6px;font-weight:600">Telefunc</span></a><div id="docsearch-mobile"></div></div></div><div id="page-content"><h1>Tour</h1><blockquote><p>Alreay familiar with RPC? Only read the last sections:</p><ul><li><a href="#abort-shield"><code>Abort()</code> &amp; <code>shield()</code></a></li><li><a href="#authentication-permissions">Authentication &amp; Permissions</a></li><li><a href="#inversion-of-control">Inversion of Control</a></li><li><a href="#typescript">TypeScript</a></li></ul></blockquote><p>After taking the tour
+        <div id="page-view"><div style="display:flex;justify-content:center" class="doc-page"><div id="navigation-wrapper"><div id="navigation-container"><div style="display:flex;flex-direction:column;align-items:center;margin-bottom:-5px"><a id="navigation-header-logo" style="display:flex;align-items:center;color:inherit;justify-content:left;text-decoration:none;padding-top:12px;padding-bottom:7px" href="/"><img src="/assets/telefunc.6a5581b5.svg" height="55" width="55"/><span style="font-size:2.55em;margin-left:7px;font-weight:600">Telefunc</span></a><div style="display:flex;align-items:center;padding-top:0;justify-content:left"><a class="colorize-on-hover decolorize-4" href="https://github.com/vikejs/telefunc" style="padding:3px;display:inline-block;line-height:0"><img src="/assets/github.86a91340.svg" height="20"/></a><a class="colorize-on-hover decolorize-6" href="https://discord.com/invite/3DYWwk4xRQ" style="padding:3px;display:inline-block;line-height:0"><img src="/assets/discord.c14881e9.svg" height="20"/></a><a class="colorize-on-hover decolorize-7" href="https://twitter.com/brillout" style="padding:3px;display:inline-block;line-height:0"><img src="/assets/twitter.c1bd51e1.svg" height="20"/></a><div id="docsearch-desktop"></div><a href="https://github.com/vikejs/telefunc/blob/master/CHANGELOG.md" class="button colorize-on-hover" style="display:flex;align-items:center;padding:1px 7px;margin-left:2px;font-size:0.97em;color:inherit"><span class="decolorize-7">v<!-- -->0.1.12</span><img class="decolorize-6" src="/assets/changelog.062bdc49.svg" height="16" style="margin-left:5px"/></a></div></div><div id="navigation-content" style="position:relative"><a class="nav-item nav-item-h1 nav-item-first-of-its-kind nav-item-last-of-its-kind"><span style="font-size:1.4em"><img src="/assets/compass.023c5145.svg" style="vertical-align:text-top;font-size:1em;width:1.4em"/> <span style="font-size:1rem">Overview</span></span></a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind" href="/">Introduction</a><a class="nav-item nav-item-h2  is-active  is-active-first nav-item-last-of-its-kind" href="/tour">Tour</a><a class="nav-item nav-item-h3  is-active nav-item-first-of-its-kind" href="#hello-world">Hello world</a><a class="nav-item nav-item-h3  is-active" href="#orm-sql">ORM &amp; SQL</a><a class="nav-item nav-item-h3  is-active" href="#how-it-works">How it works</a><a class="nav-item nav-item-h3  is-active" href="#telefunctions-need-protection">Telefunctions need protection</a><a class="nav-item nav-item-h3  is-active" href="#abort-shield"><code>Abort()</code> &amp; <code>shield()</code></a><a class="nav-item nav-item-h3  is-active" href="#authentication-permissions">Authentication &amp; permissions</a><a class="nav-item nav-item-h3  is-active" href="#inversion-of-control">Inversion of control</a><a class="nav-item nav-item-h3  is-active  is-active-last nav-item-last-of-its-kind" href="#typescript">TypeScript</a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind nav-item-last-of-its-kind" href="/RPC-vs-GraphQL-REST">RPC vs GraphQL/REST</a><a class="nav-item nav-item-h1 nav-item-first-of-its-kind nav-item-last-of-its-kind"><span style="font-size:1.4em">🌱<!-- --> <span style="font-size:1rem">Get started</span></span></a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind" href="/vite">Vite</a><a class="nav-item nav-item-h2" href="/next">Next.js</a><a class="nav-item nav-item-h2" href="/nuxt">Nuxt</a><a class="nav-item nav-item-h2 nav-item-last-of-its-kind" href="/install">Other</a><a class="nav-item nav-item-h1 nav-item-first-of-its-kind nav-item-last-of-its-kind"><span style="font-size:1.4em">📚<!-- --> <span style="font-size:1rem">Guides</span></span></a><a class="nav-item nav-item-h4 nav-item-first-of-its-kind nav-item-last-of-its-kind">Basics</a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind" href="/abort-shield"><code>Abort()</code> &amp; <code>shield()</code></a><a class="nav-item nav-item-h2" href="/auth">Authentication</a><a class="nav-item nav-item-h2" href="/permissions">Permissions</a><a class="nav-item nav-item-h2" href="/file-structure">File structure</a><a class="nav-item nav-item-h2 nav-item-last-of-its-kind" href="/form-validation">Form validation</a><a class="nav-item nav-item-h4 nav-item-first-of-its-kind nav-item-last-of-its-kind">More</a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind" href="/typescript">TypeScript</a><a class="nav-item nav-item-h2" href="/telefunc-server">Telefunc Server</a><a class="nav-item nav-item-h2" href="/waterfalls">Waterfalls</a><a class="nav-item nav-item-h2 nav-item-last-of-its-kind" href="/ssr">Server-Side Rendering (SSR)</a><a class="nav-item nav-item-h1 nav-item-first-of-its-kind nav-item-last-of-its-kind"><span style="font-size:1.4em">⚙<!-- --> <span style="font-size:1rem">API</span></span></a><a class="nav-item nav-item-h4 nav-item-first-of-its-kind nav-item-last-of-its-kind">Protection</a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind" href="/shield"><code>shield()</code></a><a class="nav-item nav-item-h2 nav-item-last-of-its-kind" href="/Abort"><code>Abort()</code></a><a class="nav-item nav-item-h4 nav-item-first-of-its-kind nav-item-last-of-its-kind">Context</a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind" href="/getContext"><code>getContext()</code></a><a class="nav-item nav-item-h2 nav-item-last-of-its-kind" href="/provideTelefuncContext"><code>provideTelefuncContext()</code></a><a class="nav-item nav-item-h4 nav-item-first-of-its-kind nav-item-last-of-its-kind">Integration</a><a class="nav-item nav-item-h2 nav-item-first-of-its-kind" href="/createTelefuncCaller"><code>createTelefuncCaller()</code></a><a class="nav-item nav-item-h2 nav-item-last-of-its-kind" href="/config"><code>config</code></a></div></div><div id="navigation-mask"></div></div><div id="page-wrapper"><div id="page-container"><div id="mobile-header" style="height:var(--mobile-header-height);width:100vw;position:relative"><div style="position:fixed;display:flex;align-items:center;background:white;z-index:99;top:0;left:0;height:var(--mobile-header-height);width:100%;border-bottom:1px solid #ddd"><div style="padding:20px;line-height:0" id="menu-toggle"><svg style="width:20px" class="icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/" style="color:inherit;display:flex;align-items:center;justify-content:left;text-decoration:none"><img src="/assets/telefunc.6a5581b5.svg" height="40" width="40"/><span style="font-size:1.55em;margin-left:6px;font-weight:600">Telefunc</span></a><div id="docsearch-mobile"></div></div></div><div id="page-content"><h1>Tour</h1><blockquote>
+<p>Alreay familiar with RPC? Only read the last sections:</p>
+<ul>
+<li><a href="#abort-shield"><code>Abort()</code> &amp; <code>shield()</code></a></li>
+<li><a href="#authentication-permissions">Authentication &amp; Permissions</a></li>
+<li><a href="#inversion-of-control">Inversion of Control</a></li>
+<li><a href="#typescript">TypeScript</a></li>
+</ul>
+</blockquote>
+<p>After taking the tour
 you&#x27;ll have a comprehensive overview of what Telefunc is and
-be able proficiently use it.</p><h2 id="hello-world">Hello world</h2><p>Telefunc enables functions defined on the server-side to be called remotely from the browser-side.</p><pre><code class="hljs language-js"><span class="hljs-comment">// hello.telefunc.js</span>
-<span class="hljs-comment">// Environment: Node.js server</span>
-
-<span class="hljs-keyword">export</span> { hello }
-
-<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">hello</span>(<span class="hljs-params">{ name }</span>) </span>{
-  <span class="hljs-keyword">const</span> message = <span class="hljs-string">&#x27;Welcome &#x27;</span> + name
-  <span class="hljs-keyword">return</span> { message }
-}</code></pre><pre><code class="hljs language-html"><span class="hljs-comment">&lt;!-- index.html --&gt;</span>
-<span class="hljs-comment">&lt;!-- Environment: Browser --&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;module&quot;</span>&gt;</span><span class="javascript">
-      <span class="hljs-comment">// This import doesn&#x27;t actually load the `hello.telefunc.js` file: Telefunc transforms</span>
-      <span class="hljs-comment">// `hello.telefunc.js` into a thin HTTP client.</span>
-      <span class="hljs-keyword">import</span> { hello } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./hello.telefunc.js&#x27;</span>
-      <span class="hljs-comment">// This thin HTTP client makes an HTTP request when we call `hello()`</span>
-      <span class="hljs-keyword">const</span> { message } = <span class="hljs-keyword">await</span> hello({ <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Eva&#x27;</span> })
-      <span class="hljs-built_in">console</span>.log(message) <span class="hljs-comment">// Prints &#x27;Welcome Eva&#x27;</span>
-    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></pre><p>Telefunctions such as <code>hello()</code> always run on the server-side.</p><blockquote><p>The practice of remotely calling functions is called <em>RPC</em> (Remote Procedure Call).</p></blockquote><h2 id="orm-sql">ORM &amp; SQL</h2><p>Because they are always run on the server-side,
-telefunctions are able to run SQL/ORM queries.</p><p>This, in essence, enables our frontend to use SQL/ORM queries.</p><pre><code class="hljs language-js"><span class="hljs-comment">// TodoList.telefunc.js</span>
-<span class="hljs-comment">// Environment: Node.js server</span>
-
-<span class="hljs-keyword">export</span> { getTodoItems }
-
-<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getTodoItems</span>(<span class="hljs-params"></span>) </span>{
-  <span class="hljs-comment">// ORM</span>
-  <span class="hljs-keyword">const</span> todoItems = <span class="hljs-keyword">await</span> Todo.findMany({ <span class="hljs-attr">select</span>: <span class="hljs-string">&#x27;text&#x27;</span> })
-  <span class="hljs-comment">// SQL</span>
-  <span class="hljs-keyword">const</span> todoItems = <span class="hljs-keyword">await</span> execute(<span class="hljs-string">&quot;SELECT text FROM todo_items;&quot;</span>)
-
-  <span class="hljs-keyword">return</span> todoItems
-}</code></pre><pre><code class="hljs language-jsx"><span class="hljs-comment">// TodoList.jsx</span>
-<span class="hljs-comment">// Environment: Browser</span>
-
-<span class="hljs-keyword">import</span> { getTodoItems } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./TodoList.telefunc.js&#x27;</span>
-
-<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">TodoList</span>(<span class="hljs-params"></span>) </span>{
-  <span class="hljs-comment">// Our frontend uses the telefunction `getTodoItems()` to execute a SQL/ORM query that</span>
-  <span class="hljs-comment">// retrieves the data it needs.</span>
-  <span class="hljs-keyword">const</span> todoItems = <span class="hljs-keyword">await</span> getTodoItems()
-  <span class="hljs-keyword">return</span> (
-    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>{ todoItems.map(item =&gt;
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>{ item.text }<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    )}<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></span>
-  )
-}</code></pre><blockquote><p>Note how we collocate and name <code>TodoList.telefunc.js</code> after <code>TodoList.jsx</code>; it&#x27;s a practice we&#x27;ll talk about later.</p></blockquote><blockquote><p>Our examples use JSX but note that Telefunc works with any UI framework (React, Vue, Angular, Svelte, ...).</p></blockquote><p>Our frontend can also use telefunctions to mutate data.</p><pre><code class="hljs language-js"><span class="hljs-comment">// CreateTodo.telefunc.js</span>
-<span class="hljs-comment">// Environment: Node.js server</span>
-
-<span class="hljs-keyword">import</span> { shield } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;telefunc&#x27;</span>
-
-<span class="hljs-keyword">export</span> { onNewTodo }
-
-<span class="hljs-comment">// We&#x27;ll talk about `shield()` in a moment</span>
-shield(onNewTodo, [shield.type.string])
-<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onNewTodo</span>(<span class="hljs-params">text</span>) </span>{
-  <span class="hljs-comment">// ORM</span>
-  <span class="hljs-keyword">const</span> todoItem = <span class="hljs-keyword">new</span> Todo({ text })
-  <span class="hljs-keyword">await</span> todoItem.save()
-
-  <span class="hljs-comment">// SQL</span>
-  <span class="hljs-keyword">await</span> execute(
-    <span class="hljs-string">&quot;INSERT INTO todo_items VALUES (:text)&quot;</span>,
-    { text }
-  )
-}</code></pre><pre><code class="hljs language-jsx"><span class="hljs-comment">// CreateTodo.jsx</span>
-<span class="hljs-comment">// Environment: Browser</span>
-
-<span class="hljs-keyword">import</span> { onNewTodo } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./CreateTodo.telefunc.js&#x27;</span>
-
-<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onClick</span>(<span class="hljs-params">form</span>) </span>{
-  <span class="hljs-keyword">const</span> text = form.input.value
-  <span class="hljs-keyword">await</span> onNewTodo(text)
-}
-
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">CreateTodo</span>(<span class="hljs-params"></span>) </span>{
-  <span class="hljs-keyword">return</span> (
-    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">input</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">input</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{onClick}</span>&gt;</span>Add To-Do<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></span>
-  )
-}</code></pre><p>This means our frontend can directly tap into the power of our SQL/ORM engine.
-This is both simpler and more powerful than REST/GraphQL.</p><blockquote><p>We need a GraphQL/RESTful API only if third parties need to be able to access our database,
+be able proficiently use it.</p>
+<h2 id="hello-world">Hello world</h2>
+<p>Telefunc enables functions defined on the server-side to be called remotely from the browser-side.</p>
+<div data-rehype-pretty-code-fragment=""><pre><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// hello.telefunc.js</span></span>
+<span class="line"><span style="color:#6E7781">// Environment: Node.js server</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { hello }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">hello</span><span style="color:#24292F">({ </span><span style="color:#953800">name</span><span style="color:#24292F"> }) {</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">message</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;Welcome &#x27;</span><span style="color:#24292F"> </span><span style="color:#CF222E">+</span><span style="color:#24292F"> name</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> { message }</span></span>
+<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<div data-rehype-pretty-code-fragment=""><pre><code data-language="html" data-theme="default"><span class="line"><span style="color:#6E7781">&lt;!-- index.html --&gt;</span></span>
+<span class="line"><span style="color:#6E7781">&lt;!-- Environment: Browser --&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292F">&lt;</span><span style="color:#116329">html</span><span style="color:#24292F">&gt;</span></span>
+<span class="line"><span style="color:#24292F">  &lt;</span><span style="color:#116329">body</span><span style="color:#24292F">&gt;</span></span>
+<span class="line"><span style="color:#24292F">    &lt;</span><span style="color:#116329">script</span><span style="color:#24292F"> </span><span style="color:#0550AE">type</span><span style="color:#24292F">=</span><span style="color:#0A3069">&quot;module&quot;</span><span style="color:#24292F">&gt;</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// This import doesn&#x27;t actually load the `hello.telefunc.js` file: Telefunc transforms</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// `hello.telefunc.js` into a thin HTTP client.</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#CF222E">import</span><span style="color:#24292F"> { hello } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;./hello.telefunc.js&#x27;</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#6E7781">// This thin HTTP client makes an HTTP request when we call `hello()`</span></span>
+<span class="line"><span style="color:#24292F">      </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">message</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">hello</span><span style="color:#24292F">({ name: </span><span style="color:#0A3069">&#x27;Eva&#x27;</span><span style="color:#24292F"> })</span></span>
+<span class="line"><span style="color:#24292F">      console.</span><span style="color:#8250DF">log</span><span style="color:#24292F">(message) </span><span style="color:#6E7781">// Prints &#x27;Welcome Eva&#x27;</span></span>
+<span class="line"><span style="color:#24292F">    &lt;/</span><span style="color:#116329">script</span><span style="color:#24292F">&gt;</span></span>
+<span class="line"><span style="color:#24292F">  &lt;/</span><span style="color:#116329">body</span><span style="color:#24292F">&gt;</span></span>
+<span class="line"><span style="color:#24292F">&lt;/</span><span style="color:#116329">html</span><span style="color:#24292F">&gt;</span></span></code></pre></div>
+<p>Telefunctions such as <code>hello()</code> always run on the server-side.</p>
+<blockquote>
+<p>The practice of remotely calling functions is called <em>RPC</em> (Remote Procedure Call).</p>
+</blockquote>
+<h2 id="orm-sql">ORM &amp; SQL</h2>
+<p>Because they are always run on the server-side,
+telefunctions are able to run SQL/ORM queries.</p>
+<p>This, in essence, enables our frontend to use SQL/ORM queries.</p>
+<div data-rehype-pretty-code-fragment=""><pre><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// TodoList.telefunc.js</span></span>
+<span class="line"><span style="color:#6E7781">// Environment: Node.js server</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { getTodoItems }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">getTodoItems</span><span style="color:#24292F">() {</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// ORM</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">todoItems</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> Todo.</span><span style="color:#8250DF">findMany</span><span style="color:#24292F">({ select: </span><span style="color:#0A3069">&#x27;text&#x27;</span><span style="color:#24292F"> })</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// SQL</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">todoItems</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">execute</span><span style="color:#24292F">(</span><span style="color:#0A3069">&quot;SELECT text FROM todo_items;&quot;</span><span style="color:#24292F">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> todoItems</span></span>
+<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<div data-rehype-pretty-code-fragment=""><pre><code data-language="jsx" data-theme="default"><span class="line"><span style="color:#6E7781">// TodoList.jsx</span></span>
+<span class="line"><span style="color:#6E7781">// Environment: Browser</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { getTodoItems } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;./TodoList.telefunc.js&#x27;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">TodoList</span><span style="color:#24292F">() {</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// Our frontend uses the telefunction `getTodoItems()` to execute a SQL/ORM query that</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// retrieves the data it needs.</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">todoItems</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">getTodoItems</span><span style="color:#24292F">()</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> (</span></span>
+<span class="line"><span style="color:#24292F">    &lt;</span><span style="color:#116329">ul</span><span style="color:#24292F">&gt;{ todoItems.</span><span style="color:#8250DF">map</span><span style="color:#24292F">(</span><span style="color:#953800">item</span><span style="color:#24292F"> </span><span style="color:#CF222E">=&gt;</span></span>
+<span class="line"><span style="color:#24292F">      &lt;</span><span style="color:#116329">li</span><span style="color:#24292F">&gt;{ item.text }&lt;/</span><span style="color:#116329">li</span><span style="color:#24292F">&gt;</span></span>
+<span class="line"><span style="color:#24292F">    )}&lt;/</span><span style="color:#116329">ul</span><span style="color:#24292F">&gt;</span></span>
+<span class="line"><span style="color:#24292F">  )</span></span>
+<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<blockquote>
+<p>Note how we collocate and name <code>TodoList.telefunc.js</code> after <code>TodoList.jsx</code>; it&#x27;s a practice we&#x27;ll talk about later.</p>
+</blockquote>
+<blockquote>
+<p>Our examples use JSX but note that Telefunc works with any UI framework (React, Vue, Angular, Svelte, ...).</p>
+</blockquote>
+<p>Our frontend can also use telefunctions to mutate data.</p>
+<div data-rehype-pretty-code-fragment=""><pre><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// CreateTodo.telefunc.js</span></span>
+<span class="line"><span style="color:#6E7781">// Environment: Node.js server</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { shield } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;telefunc&#x27;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { onNewTodo }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6E7781">// We&#x27;ll talk about `shield()` in a moment</span></span>
+<span class="line"><span style="color:#8250DF">shield</span><span style="color:#24292F">(onNewTodo, [shield.type.string])</span></span>
+<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onNewTodo</span><span style="color:#24292F">(</span><span style="color:#953800">text</span><span style="color:#24292F">) {</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// ORM</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">todoItem</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">new</span><span style="color:#24292F"> </span><span style="color:#8250DF">Todo</span><span style="color:#24292F">({ text })</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">await</span><span style="color:#24292F"> todoItem.</span><span style="color:#8250DF">save</span><span style="color:#24292F">()</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// SQL</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">execute</span><span style="color:#24292F">(</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#0A3069">&quot;INSERT INTO todo_items VALUES (:text)&quot;</span><span style="color:#24292F">,</span></span>
+<span class="line"><span style="color:#24292F">    { text }</span></span>
+<span class="line"><span style="color:#24292F">  )</span></span>
+<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<div data-rehype-pretty-code-fragment=""><pre><code data-language="jsx" data-theme="default"><span class="line"><span style="color:#6E7781">// CreateTodo.jsx</span></span>
+<span class="line"><span style="color:#6E7781">// Environment: Browser</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { onNewTodo } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;./CreateTodo.telefunc.js&#x27;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onClick</span><span style="color:#24292F">(</span><span style="color:#953800">form</span><span style="color:#24292F">) {</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">text</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> form.input.value</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">onNewTodo</span><span style="color:#24292F">(text)</span></span>
+<span class="line"><span style="color:#24292F">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">CreateTodo</span><span style="color:#24292F">() {</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> (</span></span>
+<span class="line"><span style="color:#24292F">    &lt;</span><span style="color:#116329">form</span><span style="color:#24292F">&gt;</span></span>
+<span class="line"><span style="color:#24292F">      &lt;</span><span style="color:#116329">input</span><span style="color:#24292F"> </span><span style="color:#0550AE">input</span><span style="color:#CF222E">=</span><span style="color:#0A3069">&quot;text&quot;</span><span style="color:#24292F">&gt;&lt;/</span><span style="color:#116329">input</span><span style="color:#24292F">&gt;</span></span>
+<span class="line"><span style="color:#24292F">      &lt;</span><span style="color:#116329">button</span><span style="color:#24292F"> </span><span style="color:#0550AE">onClick</span><span style="color:#CF222E">=</span><span style="color:#24292F">{onClick}&gt;Add To-Do&lt;/</span><span style="color:#116329">button</span><span style="color:#24292F">&gt;</span></span>
+<span class="line"><span style="color:#24292F">    &lt;/</span><span style="color:#116329">form</span><span style="color:#24292F">&gt;</span></span>
+<span class="line"><span style="color:#24292F">  )</span></span>
+<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<p>This means our frontend can directly tap into the power of our SQL/ORM engine.
+This is both simpler and more powerful than REST/GraphQL.</p>
+<blockquote>
+<p>We need a GraphQL/RESTful API only if third parties need to be able to access our database,
 or if we are a very large company with highly complex databases.
-We explain why at <a href="/RPC-vs-GraphQL-REST">Overview<!-- --> &gt; <!-- -->RPC vs GraphQL/REST</a>.</p></blockquote><h2 id="how-it-works">How it works</h2><blockquote><p>Understanding the basic mechanics of Telefunc is paramount in order to proficiently use Telefunc.</p></blockquote><p>Let&#x27;s see what happens when we call a telefunction.</p><pre><code class="hljs language-js"><span class="hljs-comment">// hello.telefunc.js</span>
-<span class="hljs-comment">// Environment: Node.js server</span>
-
-<span class="hljs-keyword">export</span> { hello }
-
-<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">hello</span>(<span class="hljs-params">{ name }</span>) </span>{
-  <span class="hljs-keyword">const</span> message = <span class="hljs-string">&#x27;Welcome &#x27;</span> + name
-  <span class="hljs-keyword">return</span> { message }
-}</code></pre><pre><code class="hljs language-js"><span class="hljs-comment">// Environment: Browser</span>
-
-<span class="hljs-keyword">import</span> { hello } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./hello.telefunc.js&#x27;</span>
-
-<span class="hljs-keyword">const</span> message = <span class="hljs-keyword">await</span> hello(<span class="hljs-string">&#x27;Eva&#x27;</span>)</code></pre><p>The <code>hello.telefunc.js</code> file is never loaded in the browser:
-Telefunc transforms <code>hello.telefunc.js</code> into the following:</p><pre><code class="hljs language-js"><span class="hljs-comment">// hello.telefunc.js (after Telefunc transformation)</span>
-<span class="hljs-comment">// Environement: Browser</span>
-<span class="hljs-keyword">import</span> { __internal_makeHttpRequest } <span class="hljs-string">&#x27;telefunc/client&#x27;</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> hello = <span class="hljs-function">(<span class="hljs-params">...args</span>) =&gt;</span> __internal_makeHttpRequest(<span class="hljs-string">&#x27;/hello.telefunc.js:hello&#x27;</span>, args)</code></pre><p>So, when we call <code>hello(&#x27;Eva&#x27;)</code> in the browser-side, the following happens:</p><ol><li><p>On the browser-side, the <code>__internal_makeHttpRequest()</code> function makes an HTTP request to our server.</p><pre><code>POST /_telefunc HTTP/1.1
+We explain why at <a href="/RPC-vs-GraphQL-REST">Overview<!-- --> &gt; <!-- -->RPC vs GraphQL/REST</a>.</p>
+</blockquote>
+<h2 id="how-it-works">How it works</h2>
+<blockquote>
+<p>Understanding the basic mechanics of Telefunc is paramount in order to proficiently use Telefunc.</p>
+</blockquote>
+<p>Let&#x27;s see what happens when we call a telefunction.</p>
+<div data-rehype-pretty-code-fragment=""><pre><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// hello.telefunc.js</span></span>
+<span class="line"><span style="color:#6E7781">// Environment: Node.js server</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { hello }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">hello</span><span style="color:#24292F">({ </span><span style="color:#953800">name</span><span style="color:#24292F"> }) {</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">message</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;Welcome &#x27;</span><span style="color:#24292F"> </span><span style="color:#CF222E">+</span><span style="color:#24292F"> name</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> { message }</span></span>
+<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<div data-rehype-pretty-code-fragment=""><pre><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// Environment: Browser</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { hello } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;./hello.telefunc.js&#x27;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">message</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">hello</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;Eva&#x27;</span><span style="color:#24292F">)</span></span></code></pre></div>
+<p>The <code>hello.telefunc.js</code> file is never loaded in the browser:
+Telefunc transforms <code>hello.telefunc.js</code> into the following:</p>
+<div data-rehype-pretty-code-fragment=""><pre><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// hello.telefunc.js (after Telefunc transformation)</span></span>
+<span class="line"><span style="color:#6E7781">// Environement: Browser</span></span>
+<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { __internal_makeHttpRequest } </span><span style="color:#0A3069">&#x27;telefunc/client&#x27;</span></span>
+<span class="line"><span style="color:#24292F">export const hello = (...args) =&gt; __internal_makeHttpRequest(</span><span style="color:#0A3069">&#x27;/hello.telefunc.js:hello&#x27;</span><span style="color:#24292F">, args)</span></span></code></pre></div>
+<p>So, when we call <code>hello(&#x27;Eva&#x27;)</code> in the browser-side, the following happens:</p>
+<ol>
+<li>On the browser-side, the <code>__internal_makeHttpRequest()</code> function makes an HTTP request to our server.<!-- -->
+<pre><code>POST /_telefunc HTTP/1.1
 {
   &quot;path&quot;: &quot;/hello.telefunc.js:hello&quot;,
   &quot;args&quot;: [{&quot;name&quot;: &quot;Eva&quot;}]
 }
-</code></pre></li><li><p>On the server-side, our Telefunc middleware:</p><pre><code class="hljs language-js"><span class="hljs-comment">// server.js</span>
-<span class="hljs-keyword">import</span> { createTelefunc } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;telefunc&#x27;</span>
-
-<span class="hljs-comment">// Server middleware (Express.js/Fastify/Koa/Hapi/...)</span>
-<span class="hljs-keyword">const</span> { telefunc } = createTelefunc()
-app.use(<span class="hljs-string">&#x27;/_telefunc&#x27;</span>, <span class="hljs-keyword">async</span> (req, res) =&gt; {
-  <span class="hljs-keyword">const</span> httpResponse = <span class="hljs-keyword">await</span> telefunc(req)
-  res.send(httpResponse.body)
-})</code></pre><p>Replies following HTTP response:</p><pre><code>HTTP/1.1 200 OK
+</code></pre>
+</li>
+<li>On the server-side, our Telefunc middleware:<!-- -->
+<div data-rehype-pretty-code-fragment=""><pre><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// server.js</span></span>
+<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { createTelefunc } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;telefunc&#x27;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6E7781">// Server middleware (Express.js/Fastify/Koa/Hapi/...)</span></span>
+<span class="line"><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">telefunc</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#8250DF">createTelefunc</span><span style="color:#24292F">()</span></span>
+<span class="line"><span style="color:#24292F">app.</span><span style="color:#8250DF">use</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;/_telefunc&#x27;</span><span style="color:#24292F">, </span><span style="color:#CF222E">async</span><span style="color:#24292F"> (</span><span style="color:#953800">req</span><span style="color:#24292F">, </span><span style="color:#953800">res</span><span style="color:#24292F">) </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> {</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">httpResponse</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">telefunc</span><span style="color:#24292F">(req)</span></span>
+<span class="line"><span style="color:#24292F">  res.</span><span style="color:#8250DF">send</span><span style="color:#24292F">(httpResponse.body)</span></span>
+<span class="line"><span style="color:#24292F">})</span></span></code></pre></div>
+<!-- -->Replies following HTTP response:<!-- -->
+<pre><code>HTTP/1.1 200 OK
 {
   &quot;return&quot;: {
     &quot;message&quot;: &quot;Welcome Eva&quot;
   }
 }
-</code></pre></li></ol><p>In other words,
+</code></pre>
+</li>
+</ol>
+<p>In other words,
 the <code>hello()</code> function is always executed on the server-side,
-and the browser-side remotely calls <code>hello()</code> by using an HTTP request.</p><h2 id="telefunctions-need-protection">Telefunctions need protection</h2><p>Our telefunctions can be remotely called not only by our frontend but really by anyone.</p><p>Anyone can open a terminal and make an HTTP request:</p><pre><code class="hljs language-bash">curl https://our-website.com/_telefunc --data <span class="hljs-string">&#x27;{
-   &quot;path&quot;: &quot;/hello.telefunc.js:hello&quot;,
-   &quot;args&quot;: [{&quot;name&quot;: &quot;Elisabeth&quot;}]
- }&#x27;</span></code></pre><p>Thus, such telefunction is problematic:</p><pre><code class="hljs language-js"><span class="hljs-comment">// sql.telefunc.js</span>
-<span class="hljs-comment">// Environment: Node.js server</span>
-
-<span class="hljs-keyword">export</span> { run }
-
-<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">run</span>(<span class="hljs-params">sql</span>) </span>{
-  <span class="hljs-keyword">return</span> <span class="hljs-keyword">await</span> database.execute(sql)
-}</code></pre><p>This <code>run()</code> telefunction essentially exposes our entire database to the world as
-anyone can make an HTTP request like the following.</p><pre><code class="hljs language-bash">curl https://our-website.com/_telefunc --data <span class="hljs-string">&#x27;{
-    &quot;path&quot;: &quot;/run.telefunc.js:run&quot;,
-    &quot;args&quot;: [&quot;SELECT login, password FROM users;&quot;]
-  }&#x27;</span></code></pre><p>We should always keep mind that our telefunctions are public and need protection.</p><h2 id="abort-shield"><code>Abort()</code> &amp; <code>shield()</code></h2><p>As we&#x27;ve seen in the previous section,
-the following telefunction is not safe.</p><pre><code class="hljs language-js"><span class="hljs-comment">// run.telefunc.js</span>
-<span class="hljs-comment">// Environment: Node.js server</span>
-
-<span class="hljs-keyword">export</span> { run }
-
-<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">run</span>(<span class="hljs-params">sql</span>) </span>{
-  <span class="hljs-keyword">return</span> <span class="hljs-keyword">await</span> database.execute(sql)
-}</code></pre><p>But we can <code>throw Abort()</code> to protect it:</p><pre><code class="hljs language-js"><span class="hljs-comment">// run.telefunc.js</span>
-<span class="hljs-comment">// Environment: Node.js server</span>
-
-<span class="hljs-keyword">import</span> { Abort, getContext } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;telefunc&#x27;</span>
-
-<span class="hljs-keyword">export</span> { run }
-
-<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">run</span>(<span class="hljs-params">sql</span>) </span>{
-  <span class="hljs-comment">// We&#x27;ll talk about `getContext()` later</span>
-  <span class="hljs-keyword">const</span> { user } = getContext()
-
-  <span class="hljs-comment">// Only admins are allowed to run this telefunction</span>
-  <span class="hljs-keyword">if</span> (user.isAdmin !== <span class="hljs-literal">true</span>) {
-    <span class="hljs-keyword">throw</span> Abort()
-  }
-
-  <span class="hljs-keyword">return</span> <span class="hljs-keyword">await</span> database.execute(sql)
-}</code></pre><p>Also,
+and the browser-side remotely calls <code>hello()</code> by using an HTTP request.</p>
+<h2 id="telefunctions-need-protection">Telefunctions need protection</h2>
+<p>Our telefunctions can be remotely called not only by our frontend but really by anyone.</p>
+<p>Anyone can open a terminal and make an HTTP request:</p>
+<div data-rehype-pretty-code-fragment=""><pre><code data-language="bash" data-theme="default"><span class="line"><span style="color:#24292F">curl https://our-website.com/_telefunc --data </span><span style="color:#0A3069">&#x27;{</span></span>
+<span class="line"><span style="color:#0A3069">   &quot;path&quot;: &quot;/hello.telefunc.js:hello&quot;,</span></span>
+<span class="line"><span style="color:#0A3069">   &quot;args&quot;: [{&quot;name&quot;: &quot;Elisabeth&quot;}]</span></span>
+<span class="line"><span style="color:#0A3069"> }&#x27;</span></span></code></pre></div>
+<p>Thus, such telefunction is problematic:</p>
+<div data-rehype-pretty-code-fragment=""><pre><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// sql.telefunc.js</span></span>
+<span class="line"><span style="color:#6E7781">// Environment: Node.js server</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { run }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">run</span><span style="color:#24292F">(</span><span style="color:#953800">sql</span><span style="color:#24292F">) {</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> database.</span><span style="color:#8250DF">execute</span><span style="color:#24292F">(sql)</span></span>
+<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<p>This <code>run()</code> telefunction essentially exposes our entire database to the world as
+anyone can make an HTTP request like the following.</p>
+<div data-rehype-pretty-code-fragment=""><pre><code data-language="bash" data-theme="default"><span class="line"><span style="color:#24292F">curl https://our-website.com/_telefunc --data </span><span style="color:#0A3069">&#x27;{</span></span>
+<span class="line"><span style="color:#0A3069">    &quot;path&quot;: &quot;/run.telefunc.js:run&quot;,</span></span>
+<span class="line"><span style="color:#0A3069">    &quot;args&quot;: [&quot;SELECT login, password FROM users;&quot;]</span></span>
+<span class="line"><span style="color:#0A3069">  }&#x27;</span></span></code></pre></div>
+<p>We should always keep mind that our telefunctions are public and need protection.</p>
+<h2 id="abort-shield"><code>Abort()</code> &amp; <code>shield()</code></h2>
+<p>As we&#x27;ve seen in the previous section,
+the following telefunction is not safe.</p>
+<div data-rehype-pretty-code-fragment=""><pre><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// run.telefunc.js</span></span>
+<span class="line"><span style="color:#6E7781">// Environment: Node.js server</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { run }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">run</span><span style="color:#24292F">(</span><span style="color:#953800">sql</span><span style="color:#24292F">) {</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> database.</span><span style="color:#8250DF">execute</span><span style="color:#24292F">(sql)</span></span>
+<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<p>But we can <code>throw Abort()</code> to protect it:</p>
+<div data-rehype-pretty-code-fragment=""><pre><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// run.telefunc.js</span></span>
+<span class="line"><span style="color:#6E7781">// Environment: Node.js server</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { Abort, getContext } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;telefunc&#x27;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { run }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">run</span><span style="color:#24292F">(</span><span style="color:#953800">sql</span><span style="color:#24292F">) {</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// We&#x27;ll talk about `getContext()` later</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">user</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#8250DF">getContext</span><span style="color:#24292F">()</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// Only admins are allowed to run this telefunction</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">if</span><span style="color:#24292F"> (user.isAdmin </span><span style="color:#CF222E">!==</span><span style="color:#24292F"> </span><span style="color:#0550AE">true</span><span style="color:#24292F">) {</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">throw</span><span style="color:#24292F"> </span><span style="color:#8250DF">Abort</span><span style="color:#24292F">()</span></span>
+<span class="line"><span style="color:#24292F">  }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> database.</span><span style="color:#8250DF">execute</span><span style="color:#24292F">(sql)</span></span>
+<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<p>Also,
 since telefunctions are public and can be called by anyone,
-we cannot assuming anything about the arguments.</p><pre><code class="hljs language-js"><span class="hljs-comment">// CreateTodo.telefunc.js</span>
-<span class="hljs-comment">// Environment: Node.js server</span>
-
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onNewTodo</span>(<span class="hljs-params">text</span>) </span>{
-  <span class="hljs-comment">// While our frontend may always call `onNewTodo(text)` with `typeof text === &#x27;string&#x27;`,</span>
-  <span class="hljs-comment">// `onNewTodo()` is public; anyone can call `onNewTodo(undefined)`.</span>
-
-  <span class="hljs-comment">// This may throw:</span>
-  <span class="hljs-comment">//   Uncaught TypeError: Cannot read properties of undefined (reading &#x27;toUpperCase&#x27;)</span>
-  text = text.toUpperCase()
-
-  <span class="hljs-comment">// We can use `Abort()` to ensure that `text` is a string</span>
-  <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> text !== <span class="hljs-string">&#x27;string&#x27;</span>) {
-    <span class="hljs-keyword">throw</span> Abort()
-  }
-
-  <span class="hljs-comment">// We can now safely assume `text` to be a string</span>
-  text = text.toUpperCase()
-}</code></pre><p>For more convenience we can use <code>shield()</code> instead of <code>Abort()</code>:</p><pre><code class="hljs language-js"><span class="hljs-comment">// CreateTodo.telefunc.js</span>
-<span class="hljs-comment">// Environment: Node.js server</span>
-
-<span class="hljs-keyword">import</span> { shield } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;telefunc&#x27;</span>
-<span class="hljs-keyword">const</span> t = shield.type
-
-shield(onNewTodo, [text: t.string])
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onNewTodo</span>(<span class="hljs-params">text</span>) </span>{
-  <span class="hljs-comment">// ...</span>
-}</code></pre><p>Not only does <code>shield()</code> call <code>throw Abort()</code> on our behalf, but it also infers the arguments&#x27; type for IntelliSense and TypeScript.</p><blockquote><a href="/shield">API<!-- --> &gt; <code>shield()</code></a> lists all <code>shield()</code> types. (<code>shield.type.string</code>, <code>shield.type.number</code>, <code>shield.type.array()</code>, ...)</blockquote><h2 id="authentication-permissions">Authentication &amp; permissions</h2><p>We can authenticate users by using <code>getContext()</code> with <code>provideTelefuncContext()</code>.</p><pre><code class="hljs language-js"><span class="hljs-comment">// server.js</span>
-<span class="hljs-comment">// Environment: Node.js</span>
-
-<span class="hljs-keyword">import</span> { provideTelefuncContext } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;telefunc&#x27;</span>
-
-<span class="hljs-comment">// Server middleware (Express.js/Fastify/Koa/Hapi/...)</span>
-app.all(<span class="hljs-string">&#x27;/_telefunc&#x27;</span>, <span class="hljs-keyword">async</span> (req, res) =&gt; {
-  <span class="hljs-comment">// Authentication middlewares (e.g. Passport.js or Grant) usually provide information</span>
-  <span class="hljs-comment">// about the logged-in user on the `req` object.</span>
-  <span class="hljs-keyword">const</span> user = req.user
-
-  <span class="hljs-comment">// Or when using a third-party authentication provider (e.g. Auth0):</span>
-  <span class="hljs-keyword">const</span> user = <span class="hljs-keyword">await</span> authProviderApi.getUser(req.headers)
-
-  <span class="hljs-comment">// We make `user` available to our telefunctions</span>
-  provideTelefuncContext({ user })
-
-  <span class="hljs-comment">// The usual Telefunc integration</span>
-  <span class="hljs-keyword">const</span> httpResponse = <span class="hljs-keyword">await</span> telefunc({ <span class="hljs-attr">url</span>: req.url, <span class="hljs-attr">method</span>: req.method, <span class="hljs-attr">body</span>: req.body })
-  <span class="hljs-keyword">const</span> { body, statusCode, contentType } = httpResponse
-  res.status(statusCode).type(contentType).send(body)
-})</code></pre><pre><code class="hljs language-js"><span class="hljs-comment">// TodoList.telefunc.js</span>
-<span class="hljs-comment">// Environment: Node.js server</span>
-
-<span class="hljs-keyword">import</span> { getContext } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;telefunc&#x27;</span>
-
-<span class="hljs-keyword">export</span> { getTodoItems }
-
-<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getTodoItems</span>(<span class="hljs-params"></span>) </span>{
-  <span class="hljs-comment">// We can access `user` here</span>
-  <span class="hljs-keyword">const</span> { user } = getContext()
-
-  <span class="hljs-keyword">if</span> (!user) {
-    <span class="hljs-comment">// We can use `throw Abort()` to ensure that the user is logged-in</span>
-    <span class="hljs-keyword">throw</span> Abort()
-  }
-
-  <span class="hljs-comment">// We can use `user.id` to find all to-do items of the logged-in user</span>
-  <span class="hljs-keyword">const</span> authorId = user.id
-  <span class="hljs-keyword">const</span> todoItems = <span class="hljs-keyword">await</span> Todo.findMany({ <span class="hljs-attr">select</span>: <span class="hljs-string">&#x27;text&#x27;</span>, authorId })
-  <span class="hljs-keyword">return</span> todoItems
-}</code></pre><p>In general, with Telefunc, we implement permissions programmatically by using a cancel mechanism such as <code>throw new Abort()</code>.</p><pre><code class="hljs language-js"><span class="hljs-comment">// TodoItem.telefunc.js</span>
-<span class="hljs-comment">// Environment: Node.js server</span>
-
-<span class="hljs-keyword">import</span> { Abort, getContext, shield } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;telefunc&#x27;</span>
-<span class="hljs-keyword">const</span> t = shield.type
-
-<span class="hljs-keyword">export</span> { onTextChange }
-
-shield(onTextChange, [t.number, t.string])
-<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onTextChange</span>(<span class="hljs-params">id, text</span>) </span>{
-  <span class="hljs-keyword">const</span> { user } = getContext()
-
-  <span class="hljs-keyword">const</span> todoItem = <span class="hljs-keyword">await</span> Todo.findOne({ id })
-
-  <span class="hljs-comment">// Only the author of a to-do item is allowed to change its text</span>
-  <span class="hljs-keyword">if</span> (user.id !== todoItem.authorId) {
-    <span class="hljs-keyword">throw</span> Abort()
-  }
-
-  todoItem.text = text
-  <span class="hljs-keyword">await</span> todoItem.save()
-}</code></pre><h2 id="inversion-of-control">Inversion of control</h2><p>Coming from the REST/GraphQL world, we may be tempted to implement generic telefunctions.</p><pre><code class="hljs language-js"><span class="hljs-comment">// todo.telefunc.js</span>
-<span class="hljs-comment">// Environment: Node.js server</span>
-
-<span class="hljs-keyword">import</span> { shield } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;telefunc&#x27;</span>
-<span class="hljs-keyword">const</span> t = shield.type
-
-<span class="hljs-comment">// Generic telefunctions about the data model `Todo`.</span>
-
-shield(getTodoItems, [t.boolean])
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getTodoItems</span>(<span class="hljs-params">isCompleted</span>) </span>{
-  <span class="hljs-keyword">const</span> todoItems = <span class="hljs-keyword">await</span> Todo.findMany({ isCompleted })
-  <span class="hljs-keyword">return</span> todoItems
-}
-
-shield(updateTodoItem, [t.number, t.string, t.boolean])
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">updateTodoItem</span>(<span class="hljs-params">id, text, isCompleted</span>) </span>{
-  <span class="hljs-keyword">const</span> todoItem = <span class="hljs-keyword">await</span> Todo.findOne({ id })
-  todoItem.text = text
-  todoItem.isCompleted = isCompleted
-  <span class="hljs-keyword">await</span> todoItem.save()
-}</code></pre><pre><code class="hljs language-js"><span class="hljs-comment">// user.telefunc.js</span>
-
-<span class="hljs-keyword">import</span> { getContext } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;telefunc&#x27;</span>
-
-<span class="hljs-comment">// Generic telefunctions about the data model `User`.</span>
-
-<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getUserData</span>(<span class="hljs-params"></span>) </span>{
-  <span class="hljs-keyword">const</span> { user } = getContext()
-  <span class="hljs-comment">// All data that the frontend may need</span>
-  <span class="hljs-keyword">const</span> { firstName, lastName, age, country<span class="hljs-comment">/*, ...*/</span> } = user
-  <span class="hljs-keyword">return</span> { firstName, lastName, age, country<span class="hljs-comment">/*, ...*/</span> }
-}</code></pre><p>But this is not Telefunc idiomatic;
-we usually define telefunctions tailored to frontend components.</p><pre><code class="hljs language-js"><span class="hljs-comment">// TodoList.telefunc.js</span>
-
-<span class="hljs-comment">// This file provides the telefunctions that `TodoList.jsx` needs.</span>
-
-<span class="hljs-keyword">import</span> { getContext } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;telefunc&#x27;</span>
-
-<span class="hljs-keyword">export</span> { getInitialData }
-
-<span class="hljs-comment">// This returns *exactly* what `&lt;TodoList&gt;` needs.</span>
-<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getInitialData</span>(<span class="hljs-params"></span>) </span>{
-  <span class="hljs-keyword">const</span> { user } = getContext()
-
-  <span class="hljs-comment">// `&lt;TodoList&gt;` only shows non-completed to-dos.</span>
-  <span class="hljs-keyword">const</span> todoItems = <span class="hljs-keyword">await</span> Todo.findMany({ <span class="hljs-attr">isCompleted</span>: <span class="hljs-literal">false</span> })
-
-  <span class="hljs-comment">// `&lt;TodoList&gt;` only shows `user.firstName`</span>
-  <span class="hljs-keyword">const</span> { firstName } = user
-
-  <span class="hljs-keyword">return</span> {
-    <span class="hljs-attr">user</span>: { firstName },
-    todoItems
-  }
-}</code></pre><pre><code class="hljs language-js"><span class="hljs-comment">// UserProfile.telefunc.js</span>
-
-<span class="hljs-comment">// Telefunctions for `UserProfile.jsx`.</span>
-
-<span class="hljs-keyword">import</span> { getContext } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;telefunc&#x27;</span>
-
-<span class="hljs-keyword">export</span> { getInitialData }
-
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getInitialData</span>(<span class="hljs-params"></span>) </span>{
-  <span class="hljs-keyword">const</span> ctx = getContext()
-  <span class="hljs-comment">// `&lt;UserProfile&gt;` shows all user data.</span>
-  <span class="hljs-keyword">const</span> user = { ...ctx.user }
-  <span class="hljs-keyword">delete</span> user.password
-  <span class="hljs-keyword">return</span> { user }
-}</code></pre><pre><code class="hljs language-js"><span class="hljs-comment">// TodoItem.telefunc.js</span>
-
-<span class="hljs-keyword">import</span> { shield } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;telefunc&#x27;</span>
-<span class="hljs-keyword">const</span> t = shield.type
-
-<span class="hljs-comment">// Common Telefunc practice: one telefunction per user event.</span>
-
-<span class="hljs-comment">// When the user modifies the text of a to-do item</span>
-shield(onTextChange, [t.number, t.string])
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onTextChange</span>(<span class="hljs-params">id, text</span>) </span>{
-  <span class="hljs-keyword">const</span> todoItem = <span class="hljs-keyword">await</span> Todo.findOne({ id })
-  todoItem.text = text
-  <span class="hljs-keyword">await</span> todoItem.save()
-}
-
-<span class="hljs-comment">// When the user clicks on the is-completed checkbox</span>
-shield(onCompleteToggle, [t.number])
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onCompleteToggle</span>(<span class="hljs-params">id</span>) </span>{
-  <span class="hljs-keyword">const</span> todoItem = <span class="hljs-keyword">await</span> Todo.findOne({ id })
-  todoItem.isCompleted = !todoItem.isCompleted
-  <span class="hljs-keyword">await</span> todoItem.save()
-}</code></pre><p>The telefunctions of <code>TodoItem.telefunc.js</code> are determined by the needs of <code>TodoItem.jsx</code>;
-it is the frontend development/developers that own telefunctions.</p><p>This is the opposite of GraphQL/REST where it is the backend development/developers that own the GraphQL/RESTful API.</p><p>This inversion of control leads to a fundamentally improved separation of concerns.</p><h2 id="typescript">TypeScript</h2><p><code>shield()</code> can infer the type of telefunction arguments:</p><pre><code class="hljs language-ts"><span class="hljs-comment">// CreateTodo.telefunc.ts</span>
-<span class="hljs-comment">// Environment: Node.js server</span>
-
-<span class="hljs-keyword">import</span> { shield } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;telefunc&#x27;</span>
-<span class="hljs-keyword">const</span> t = shield.type
-
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> onNewTodo = shield(
-  [{ <span class="hljs-attr">text</span>: t.string, <span class="hljs-attr">tags</span>: t.array(t.string) }],
-  <span class="hljs-keyword">async</span> ({ text, tags }) =&gt; {
-    <span class="hljs-comment">// TypeScript infers `text` to `string` and `tags` to `string[]`</span>
-  }
-)</code></pre><p>With Telefunc, we seamlessly use types across frontend-backend:</p><pre><code class="hljs language-ts"><span class="hljs-comment">// CreateTodo.telefunc.ts</span>
-<span class="hljs-comment">// Environment: Node.js server</span>
-
-<span class="hljs-keyword">import</span> { shield } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;telefunc&#x27;</span>
-
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> onNewTodo = shield(
-  [shield.type.string],
-  <span class="hljs-keyword">async</span> text =&gt; {
-    <span class="hljs-keyword">const</span> todoItem = <span class="hljs-keyword">new</span> Todo()
-    todoItem.text = text
-    <span class="hljs-keyword">await</span> todoItem.save()
-    <span class="hljs-comment">// `todoItem.updatedAt` is set by the database/ORM and is of type `Date`</span>
-    <span class="hljs-keyword">const</span> { updatedAt } = todoItem
-    <span class="hljs-keyword">return</span> {
-      text,
-      updatedAt
-    }
-  }
-)</code></pre><pre><code class="hljs language-tsx"><span class="hljs-comment">// CreateTodo.tsx</span>
-<span class="hljs-comment">// Environment: Browser</span>
-
-<span class="hljs-comment">// From TypeScript&#x27;s perspective, we import `CreateTodo.telefunc.js` (TypeScript</span>
-<span class="hljs-comment">// doesn&#x27;t know that `.telefunc.js` files are transformed).</span>
-<span class="hljs-comment">// In other words: TypeScript just works. (Even automatic imports work!)</span>
-<span class="hljs-keyword">import</span> { onNewTodo } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./CreateTodo.telefunc.js&#x27;</span>
-
-<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">someCallback</span>(<span class="hljs-params">text: <span class="hljs-built_in">string</span></span>) </span>{
-  <span class="hljs-comment">// ✅ `text` is of type `string`</span>
-  <span class="hljs-keyword">const</span> todoItem = <span class="hljs-keyword">await</span> onNewTodo(text)
-  <span class="hljs-comment">// ✅ `todoItem.updatedAt` is of type `Date`; TypeScript allows us to</span>
-  <span class="hljs-comment">// use `Date.prototype.toDateString()`</span>
-  <span class="hljs-keyword">const</span> lastUpdate = <span class="hljs-string">&#x27;To-do last update: &#x27;</span> + todoItem.updatedAt.toDateString()
-
-  <span class="hljs-comment">// ...</span>
-}</code></pre><p>The type of <code>todoItem.updatedAt</code> comes from the database/ORM and we seamlessly use it on the frontend.</p><p>By using Telefunc with a TypeScript ORM, such as <a href="https://www.prisma.io/">Prisma</a>, we get end-to-end type safety all the way from database to frontend.</p><div style="margin-top:50px"><a href="https://github.com/vikejs/telefunc/edit/master/docs/pages/tour.page.mdx">✍<!-- --> Edit this page</a></div></div></div></div></div></div>
+we cannot assuming anything about the arguments.</p>
+<div data-rehype-pretty-code-fragment=""><pre><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// CreateTodo.telefunc.js</span></span>
+<span class="line"><span style="color:#6E7781">// Environment: Node.js server</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onNewTodo</span><span style="color:#24292F">(</span><span style="color:#953800">text</span><span style="color:#24292F">) {</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// While our frontend may always call `onNewTodo(text)` with `typeof text === &#x27;string&#x27;`,</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// `onNewTodo()` is public; anyone can call `onNewTodo(undefined)`.</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// This may throw:</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">//   Uncaught TypeError: Cannot read properties of undefined (reading &#x27;toUpperCase&#x27;)</span></span>
+<span class="line"><span style="color:#24292F">  text </span><span style="color:#CF222E">=</span><span style="color:#24292F"> text.</span><span style="color:#8250DF">toUpperCase</span><span style="color:#24292F">()</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// We can use `Abort()` to ensure that `text` is a string</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">if</span><span style="color:#24292F"> (</span><span style="color:#CF222E">typeof</span><span style="color:#24292F"> text </span><span style="color:#CF222E">!==</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;string&#x27;</span><span style="color:#24292F">) {</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">throw</span><span style="color:#24292F"> </span><span style="color:#8250DF">Abort</span><span style="color:#24292F">()</span></span>
+<span class="line"><span style="color:#24292F">  }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// We can now safely assume `text` to be a string</span></span>
+<span class="line"><span style="color:#24292F">  text </span><span style="color:#CF222E">=</span><span style="color:#24292F"> text.</span><span style="color:#8250DF">toUpperCase</span><span style="color:#24292F">()</span></span>
+<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<p>For more convenience we can use <code>shield()</code> instead of <code>Abort()</code>:</p>
+<div data-rehype-pretty-code-fragment=""><pre><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// CreateTodo.telefunc.js</span></span>
+<span class="line"><span style="color:#6E7781">// Environment: Node.js server</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { shield } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;telefunc&#x27;</span></span>
+<span class="line"><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">t</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> shield.type</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#8250DF">shield</span><span style="color:#24292F">(onNewTodo, [text: t.string])</span></span>
+<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onNewTodo</span><span style="color:#24292F">(</span><span style="color:#953800">text</span><span style="color:#24292F">) {</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// ...</span></span>
+<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<p>Not only does <code>shield()</code> call <code>throw Abort()</code> on our behalf, but it also infers the arguments&#x27; type for IntelliSense and TypeScript.</p>
+<blockquote>
+<p><a href="/shield">API<!-- --> &gt; <code>shield()</code></a> lists all <code>shield()</code> types. (<code>shield.type.string</code>, <code>shield.type.number</code>, <code>shield.type.array()</code>, ...)</p>
+</blockquote>
+<h2 id="authentication-permissions">Authentication &amp; permissions</h2>
+<p>We can authenticate users by using <code>getContext()</code> with <code>provideTelefuncContext()</code>.</p>
+<div data-rehype-pretty-code-fragment=""><pre><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// server.js</span></span>
+<span class="line"><span style="color:#6E7781">// Environment: Node.js</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { provideTelefuncContext } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;telefunc&#x27;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6E7781">// Server middleware (Express.js/Fastify/Koa/Hapi/...)</span></span>
+<span class="line"><span style="color:#24292F">app.</span><span style="color:#8250DF">all</span><span style="color:#24292F">(</span><span style="color:#0A3069">&#x27;/_telefunc&#x27;</span><span style="color:#24292F">, </span><span style="color:#CF222E">async</span><span style="color:#24292F"> (</span><span style="color:#953800">req</span><span style="color:#24292F">, </span><span style="color:#953800">res</span><span style="color:#24292F">) </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> {</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// Authentication middlewares (e.g. Passport.js or Grant) usually provide information</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// about the logged-in user on the `req` object.</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">user</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> req.user</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// Or when using a third-party authentication provider (e.g. Auth0):</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">user</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> authProviderApi.</span><span style="color:#8250DF">getUser</span><span style="color:#24292F">(req.headers)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// We make `user` available to our telefunctions</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#8250DF">provideTelefuncContext</span><span style="color:#24292F">({ user })</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// The usual Telefunc integration</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">httpResponse</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">telefunc</span><span style="color:#24292F">({ url: req.url, method: req.method, body: req.body })</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">body</span><span style="color:#24292F">, </span><span style="color:#0550AE">statusCode</span><span style="color:#24292F">, </span><span style="color:#0550AE">contentType</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> httpResponse</span></span>
+<span class="line"><span style="color:#24292F">  res.</span><span style="color:#8250DF">status</span><span style="color:#24292F">(statusCode).</span><span style="color:#8250DF">type</span><span style="color:#24292F">(contentType).</span><span style="color:#8250DF">send</span><span style="color:#24292F">(body)</span></span>
+<span class="line"><span style="color:#24292F">})</span></span></code></pre></div>
+<div data-rehype-pretty-code-fragment=""><pre><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// TodoList.telefunc.js</span></span>
+<span class="line"><span style="color:#6E7781">// Environment: Node.js server</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { getContext } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;telefunc&#x27;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { getTodoItems }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">getTodoItems</span><span style="color:#24292F">() {</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// We can access `user` here</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">user</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#8250DF">getContext</span><span style="color:#24292F">()</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">if</span><span style="color:#24292F"> (</span><span style="color:#CF222E">!</span><span style="color:#24292F">user) {</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// We can use `throw Abort()` to ensure that the user is logged-in</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">throw</span><span style="color:#24292F"> </span><span style="color:#8250DF">Abort</span><span style="color:#24292F">()</span></span>
+<span class="line"><span style="color:#24292F">  }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// We can use `user.id` to find all to-do items of the logged-in user</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">authorId</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> user.id</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">todoItems</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> Todo.</span><span style="color:#8250DF">findMany</span><span style="color:#24292F">({ select: </span><span style="color:#0A3069">&#x27;text&#x27;</span><span style="color:#24292F">, authorId })</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> todoItems</span></span>
+<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<p>In general, with Telefunc, we implement permissions programmatically by using a cancel mechanism such as <code>throw new Abort()</code>.</p>
+<div data-rehype-pretty-code-fragment=""><pre><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// TodoItem.telefunc.js</span></span>
+<span class="line"><span style="color:#6E7781">// Environment: Node.js server</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { Abort, getContext, shield } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;telefunc&#x27;</span></span>
+<span class="line"><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">t</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> shield.type</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { onTextChange }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#8250DF">shield</span><span style="color:#24292F">(onTextChange, [t.number, t.string])</span></span>
+<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onTextChange</span><span style="color:#24292F">(</span><span style="color:#953800">id</span><span style="color:#24292F">, </span><span style="color:#953800">text</span><span style="color:#24292F">) {</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">user</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#8250DF">getContext</span><span style="color:#24292F">()</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">todoItem</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> Todo.</span><span style="color:#8250DF">findOne</span><span style="color:#24292F">({ id })</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// Only the author of a to-do item is allowed to change its text</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">if</span><span style="color:#24292F"> (user.id </span><span style="color:#CF222E">!==</span><span style="color:#24292F"> todoItem.authorId) {</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">throw</span><span style="color:#24292F"> </span><span style="color:#8250DF">Abort</span><span style="color:#24292F">()</span></span>
+<span class="line"><span style="color:#24292F">  }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292F">  todoItem.text </span><span style="color:#CF222E">=</span><span style="color:#24292F"> text</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">await</span><span style="color:#24292F"> todoItem.</span><span style="color:#8250DF">save</span><span style="color:#24292F">()</span></span>
+<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<h2 id="inversion-of-control">Inversion of control</h2>
+<p>Coming from the REST/GraphQL world, we may be tempted to implement generic telefunctions.</p>
+<div data-rehype-pretty-code-fragment=""><pre><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// todo.telefunc.js</span></span>
+<span class="line"><span style="color:#6E7781">// Environment: Node.js server</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { shield } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;telefunc&#x27;</span></span>
+<span class="line"><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">t</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> shield.type</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6E7781">// Generic telefunctions about the data model `Todo`.</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#8250DF">shield</span><span style="color:#24292F">(getTodoItems, [t.boolean])</span></span>
+<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">getTodoItems</span><span style="color:#24292F">(</span><span style="color:#953800">isCompleted</span><span style="color:#24292F">) {</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">todoItems</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> Todo.</span><span style="color:#8250DF">findMany</span><span style="color:#24292F">({ isCompleted })</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> todoItems</span></span>
+<span class="line"><span style="color:#24292F">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#8250DF">shield</span><span style="color:#24292F">(updateTodoItem, [t.number, t.string, t.boolean])</span></span>
+<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">updateTodoItem</span><span style="color:#24292F">(</span><span style="color:#953800">id</span><span style="color:#24292F">, </span><span style="color:#953800">text</span><span style="color:#24292F">, </span><span style="color:#953800">isCompleted</span><span style="color:#24292F">) {</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">todoItem</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> Todo.</span><span style="color:#8250DF">findOne</span><span style="color:#24292F">({ id })</span></span>
+<span class="line"><span style="color:#24292F">  todoItem.text </span><span style="color:#CF222E">=</span><span style="color:#24292F"> text</span></span>
+<span class="line"><span style="color:#24292F">  todoItem.isCompleted </span><span style="color:#CF222E">=</span><span style="color:#24292F"> isCompleted</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">await</span><span style="color:#24292F"> todoItem.</span><span style="color:#8250DF">save</span><span style="color:#24292F">()</span></span>
+<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<div data-rehype-pretty-code-fragment=""><pre><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// user.telefunc.js</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { getContext } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;telefunc&#x27;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6E7781">// Generic telefunctions about the data model `User`.</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">getUserData</span><span style="color:#24292F">() {</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">user</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#8250DF">getContext</span><span style="color:#24292F">()</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// All data that the frontend may need</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">firstName</span><span style="color:#24292F">, </span><span style="color:#0550AE">lastName</span><span style="color:#24292F">, </span><span style="color:#0550AE">age</span><span style="color:#24292F">, </span><span style="color:#0550AE">country</span><span style="color:#6E7781">/*, ...*/</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> user</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> { firstName, lastName, age, country</span><span style="color:#6E7781">/*, ...*/</span><span style="color:#24292F"> }</span></span>
+<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<p>But this is not Telefunc idiomatic;
+we usually define telefunctions tailored to frontend components.</p>
+<div data-rehype-pretty-code-fragment=""><pre><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// TodoList.telefunc.js</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6E7781">// This file provides the telefunctions that `TodoList.jsx` needs.</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { getContext } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;telefunc&#x27;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { getInitialData }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6E7781">// This returns *exactly* what `&lt;TodoList&gt;` needs.</span></span>
+<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">getInitialData</span><span style="color:#24292F">() {</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">user</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#8250DF">getContext</span><span style="color:#24292F">()</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// `&lt;TodoList&gt;` only shows non-completed to-dos.</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">todoItems</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> Todo.</span><span style="color:#8250DF">findMany</span><span style="color:#24292F">({ isCompleted: </span><span style="color:#0550AE">false</span><span style="color:#24292F"> })</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// `&lt;TodoList&gt;` only shows `user.firstName`</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">firstName</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> user</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> {</span></span>
+<span class="line"><span style="color:#24292F">    user: { firstName },</span></span>
+<span class="line"><span style="color:#24292F">    todoItems</span></span>
+<span class="line"><span style="color:#24292F">  }</span></span>
+<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<div data-rehype-pretty-code-fragment=""><pre><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// UserProfile.telefunc.js</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6E7781">// Telefunctions for `UserProfile.jsx`.</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { getContext } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;telefunc&#x27;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> { getInitialData }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">getInitialData</span><span style="color:#24292F">() {</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">ctx</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#8250DF">getContext</span><span style="color:#24292F">()</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// `&lt;UserProfile&gt;` shows all user data.</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">user</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> { </span><span style="color:#CF222E">...</span><span style="color:#24292F">ctx.user }</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">delete</span><span style="color:#24292F"> user.password</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> { user }</span></span>
+<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<div data-rehype-pretty-code-fragment=""><pre><code data-language="js" data-theme="default"><span class="line"><span style="color:#6E7781">// TodoItem.telefunc.js</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { shield } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;telefunc&#x27;</span></span>
+<span class="line"><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">t</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> shield.type</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6E7781">// Common Telefunc practice: one telefunction per user event.</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6E7781">// When the user modifies the text of a to-do item</span></span>
+<span class="line"><span style="color:#8250DF">shield</span><span style="color:#24292F">(onTextChange, [t.number, t.string])</span></span>
+<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onTextChange</span><span style="color:#24292F">(</span><span style="color:#953800">id</span><span style="color:#24292F">, </span><span style="color:#953800">text</span><span style="color:#24292F">) {</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">todoItem</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> Todo.</span><span style="color:#8250DF">findOne</span><span style="color:#24292F">({ id })</span></span>
+<span class="line"><span style="color:#24292F">  todoItem.text </span><span style="color:#CF222E">=</span><span style="color:#24292F"> text</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">await</span><span style="color:#24292F"> todoItem.</span><span style="color:#8250DF">save</span><span style="color:#24292F">()</span></span>
+<span class="line"><span style="color:#24292F">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6E7781">// When the user clicks on the is-completed checkbox</span></span>
+<span class="line"><span style="color:#8250DF">shield</span><span style="color:#24292F">(onCompleteToggle, [t.number])</span></span>
+<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onCompleteToggle</span><span style="color:#24292F">(</span><span style="color:#953800">id</span><span style="color:#24292F">) {</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">todoItem</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> Todo.</span><span style="color:#8250DF">findOne</span><span style="color:#24292F">({ id })</span></span>
+<span class="line"><span style="color:#24292F">  todoItem.isCompleted </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">!</span><span style="color:#24292F">todoItem.isCompleted</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">await</span><span style="color:#24292F"> todoItem.</span><span style="color:#8250DF">save</span><span style="color:#24292F">()</span></span>
+<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<p>The telefunctions of <code>TodoItem.telefunc.js</code> are determined by the needs of <code>TodoItem.jsx</code>;
+it is the frontend development/developers that own telefunctions.</p>
+<p>This is the opposite of GraphQL/REST where it is the backend development/developers that own the GraphQL/RESTful API.</p>
+<p>This inversion of control leads to a fundamentally improved separation of concerns.</p>
+<h2 id="typescript">TypeScript</h2>
+<p><code>shield()</code> can infer the type of telefunction arguments:</p>
+<div data-rehype-pretty-code-fragment=""><pre><code data-language="ts" data-theme="default"><span class="line"><span style="color:#6E7781">// CreateTodo.telefunc.ts</span></span>
+<span class="line"><span style="color:#6E7781">// Environment: Node.js server</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { shield } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;telefunc&#x27;</span></span>
+<span class="line"><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">t</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> shield.type</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">onNewTodo</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#8250DF">shield</span><span style="color:#24292F">(</span></span>
+<span class="line"><span style="color:#24292F">  [{ text: t.string, tags: t.</span><span style="color:#8250DF">array</span><span style="color:#24292F">(t.string) }],</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">async</span><span style="color:#24292F"> ({ </span><span style="color:#953800">text</span><span style="color:#24292F">, </span><span style="color:#953800">tags</span><span style="color:#24292F"> }) </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> {</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// TypeScript infers `text` to `string` and `tags` to `string[]`</span></span>
+<span class="line"><span style="color:#24292F">  }</span></span>
+<span class="line"><span style="color:#24292F">)</span></span></code></pre></div>
+<p>With Telefunc, we seamlessly use types across frontend-backend:</p>
+<div data-rehype-pretty-code-fragment=""><pre><code data-language="ts" data-theme="default"><span class="line"><span style="color:#6E7781">// CreateTodo.telefunc.ts</span></span>
+<span class="line"><span style="color:#6E7781">// Environment: Node.js server</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { shield } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;telefunc&#x27;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">onNewTodo</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#8250DF">shield</span><span style="color:#24292F">(</span></span>
+<span class="line"><span style="color:#24292F">  [shield.type.string],</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#953800">text</span><span style="color:#24292F"> </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> {</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">todoItem</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">new</span><span style="color:#24292F"> </span><span style="color:#8250DF">Todo</span><span style="color:#24292F">()</span></span>
+<span class="line"><span style="color:#24292F">    todoItem.text </span><span style="color:#CF222E">=</span><span style="color:#24292F"> text</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">await</span><span style="color:#24292F"> todoItem.</span><span style="color:#8250DF">save</span><span style="color:#24292F">()</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// `todoItem.updatedAt` is set by the database/ORM and is of type `Date`</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">updatedAt</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> todoItem</span></span>
+<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">return</span><span style="color:#24292F"> {</span></span>
+<span class="line"><span style="color:#24292F">      text,</span></span>
+<span class="line"><span style="color:#24292F">      updatedAt</span></span>
+<span class="line"><span style="color:#24292F">    }</span></span>
+<span class="line"><span style="color:#24292F">  }</span></span>
+<span class="line"><span style="color:#24292F">)</span></span></code></pre></div>
+<div data-rehype-pretty-code-fragment=""><pre><code data-language="tsx" data-theme="default"><span class="line"><span style="color:#6E7781">// CreateTodo.tsx</span></span>
+<span class="line"><span style="color:#6E7781">// Environment: Browser</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6E7781">// From TypeScript&#x27;s perspective, we import `CreateTodo.telefunc.js` (TypeScript</span></span>
+<span class="line"><span style="color:#6E7781">// doesn&#x27;t know that `.telefunc.js` files are transformed).</span></span>
+<span class="line"><span style="color:#6E7781">// In other words: TypeScript just works. (Even automatic imports work!)</span></span>
+<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { onNewTodo } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;./CreateTodo.telefunc.js&#x27;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">someCallback</span><span style="color:#24292F">(</span><span style="color:#953800">text</span><span style="color:#CF222E">:</span><span style="color:#24292F"> </span><span style="color:#0550AE">string</span><span style="color:#24292F">) {</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// ✅ `text` is of type `string`</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">todoItem</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">onNewTodo</span><span style="color:#24292F">(text)</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// ✅ `todoItem.updatedAt` is of type `Date`; TypeScript allows us to</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// use `Date.prototype.toDateString()`</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">lastUpdate</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;To-do last update: &#x27;</span><span style="color:#24292F"> </span><span style="color:#CF222E">+</span><span style="color:#24292F"> todoItem.updatedAt.</span><span style="color:#8250DF">toDateString</span><span style="color:#24292F">()</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// ...</span></span>
+<span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
+<p>The type of <code>todoItem.updatedAt</code> comes from the database/ORM and we seamlessly use it on the frontend.</p>
+<p>By using Telefunc with a TypeScript ORM, such as <a href="https://www.prisma.io/">Prisma</a>, we get end-to-end type safety all the way from database to frontend.</p><div style="margin-top:50px"><a href="https://github.com/vikejs/telefunc/edit/master/docs/pages/tour.page.mdx">✍<!-- --> Edit this page</a></div></div></div></div></div></div>
         
       <script type="module" src="/assets/renderer/_default.page.client.ts.81d7c904.js"></script><script id="vite-plugin-ssr_pageContext" type="application/json">{"pageContext":{"_pageId":"/pages/tour"}}</script></body>
     </html>
