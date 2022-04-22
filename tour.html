@@ -452,58 +452,37 @@ it is the frontend development/developers that own telefunctions.</p>
 <p>This is the opposite of GraphQL/REST where it is the backend development/developers that own the GraphQL/RESTful API.</p>
 <p>This inversion of control leads to a fundamentally improved separation of concerns.</p>
 <h2 id="typescript">TypeScript</h2>
-<p><code>shield()</code> can infer the type of telefunction arguments:</p>
+<p>Telefunc automatically generates the <code>shield()</code> of telefunctions. There is nothing to do, it just works.</p>
+<p>This means that, not only do we seamlessly use types across frontend-backend, but we also get runtime type-safety for free.</p>
 <div data-rehype-pretty-code-fragment=""><pre><code data-language="ts" data-theme="default"><span class="line"><span style="color:#6E7781">// CreateTodo.telefunc.ts</span></span>
 <span class="line"><span style="color:#6E7781">// Environment: Node.js server</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { shield } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;telefunc&#x27;</span></span>
-<span class="line"><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">t</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> shield.type</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">onNewTodo</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#8250DF">shield</span><span style="color:#24292F">(</span></span>
-<span class="line"><span style="color:#24292F">  [{ text: t.string, tags: t.</span><span style="color:#8250DF">array</span><span style="color:#24292F">(t.string) }],</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">async</span><span style="color:#24292F"> ({ </span><span style="color:#953800">text</span><span style="color:#24292F">, </span><span style="color:#953800">tags</span><span style="color:#24292F"> }) </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// TypeScript infers `text` to `string` and `tags` to `string[]`</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
-<span class="line"><span style="color:#24292F">)</span></span></code></pre></div>
-<p>With Telefunc, we seamlessly use types across frontend-backend:</p>
-<div data-rehype-pretty-code-fragment=""><pre><code data-language="ts" data-theme="default"><span class="line"><span style="color:#6E7781">// CreateTodo.telefunc.ts</span></span>
-<span class="line"><span style="color:#6E7781">// Environment: Node.js server</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { shield } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;telefunc&#x27;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">onNewTodo</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#8250DF">shield</span><span style="color:#24292F">(</span></span>
-<span class="line"><span style="color:#24292F">  [shield.type.string],</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#953800">text</span><span style="color:#24292F"> </span><span style="color:#CF222E">=&gt;</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">todoItem</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">new</span><span style="color:#24292F"> </span><span style="color:#8250DF">Todo</span><span style="color:#24292F">()</span></span>
-<span class="line"><span style="color:#24292F">    todoItem.text </span><span style="color:#CF222E">=</span><span style="color:#24292F"> text</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">await</span><span style="color:#24292F"> todoItem.</span><span style="color:#8250DF">save</span><span style="color:#24292F">()</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#6E7781">// `todoItem.updatedAt` is set by the database/ORM and is of type `Date`</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">updatedAt</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> todoItem</span></span>
-<span class="line"><span style="color:#24292F">    </span><span style="color:#CF222E">return</span><span style="color:#24292F"> {</span></span>
-<span class="line"><span style="color:#24292F">      text,</span></span>
-<span class="line"><span style="color:#24292F">      updatedAt</span></span>
-<span class="line"><span style="color:#24292F">    }</span></span>
-<span class="line"><span style="color:#24292F">  }</span></span>
+<span class="line"><span style="color:#6E7781">// Telefunc aborts if a third-party calls `onNewTodo(42)`.</span></span>
+<span class="line"><span style="color:#CF222E">export</span><span style="color:#24292F"> </span><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">onNewTodo</span><span style="color:#24292F">(</span><span style="color:#953800">text</span><span style="color:#CF222E">:</span><span style="color:#24292F"> </span><span style="color:#0550AE">string</span><span style="color:#24292F">) {</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// Note that `todoItem` is typed by the ORM</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">todoItem</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">new</span><span style="color:#24292F"> </span><span style="color:#8250DF">Todo</span><span style="color:#24292F">()</span></span>
+<span class="line"><span style="color:#24292F">  todoItem.text </span><span style="color:#CF222E">=</span><span style="color:#24292F"> text</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">await</span><span style="color:#24292F"> todoItem.</span><span style="color:#8250DF">save</span><span style="color:#24292F">()</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> { </span><span style="color:#0550AE">id</span><span style="color:#24292F">, </span><span style="color:#0550AE">updatedAt</span><span style="color:#24292F"> } </span><span style="color:#CF222E">=</span><span style="color:#24292F"> todoItem</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">return</span><span style="color:#24292F"> { id, updatedAt }</span></span>
 <span class="line"><span style="color:#24292F">)</span></span></code></pre></div>
 <div data-rehype-pretty-code-fragment=""><pre><code data-language="tsx" data-theme="default"><span class="line"><span style="color:#6E7781">// CreateTodo.tsx</span></span>
 <span class="line"><span style="color:#6E7781">// Environment: Browser</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#6E7781">// From TypeScript&#x27;s perspective, we import `CreateTodo.telefunc.js` (TypeScript</span></span>
-<span class="line"><span style="color:#6E7781">// doesn&#x27;t know that `.telefunc.js` files are transformed).</span></span>
-<span class="line"><span style="color:#6E7781">// In other words: TypeScript just works. (Even automatic imports work!)</span></span>
+<span class="line"><span style="color:#6E7781">// From TypeScript&#x27;s perspective, `CreateTodo.telefunc.js` is imported. (TypeScript</span></span>
+<span class="line"><span style="color:#6E7781">// doesn&#x27;t know that `.telefunc.js` files are transformed.)</span></span>
+<span class="line"><span style="color:#6E7781">// I.e. TypeScript just works, including auto-import.</span></span>
 <span class="line"><span style="color:#CF222E">import</span><span style="color:#24292F"> { onNewTodo } </span><span style="color:#CF222E">from</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;./CreateTodo.telefunc.js&#x27;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#CF222E">async</span><span style="color:#24292F"> </span><span style="color:#CF222E">function</span><span style="color:#24292F"> </span><span style="color:#8250DF">someCallback</span><span style="color:#24292F">(</span><span style="color:#953800">text</span><span style="color:#CF222E">:</span><span style="color:#24292F"> </span><span style="color:#0550AE">string</span><span style="color:#24292F">) {</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// ✅ `text` is of type `string`</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">todoItem</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#CF222E">await</span><span style="color:#24292F"> </span><span style="color:#8250DF">onNewTodo</span><span style="color:#24292F">(text)</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// ✅ `todoItem.updatedAt` is of type `Date`; TypeScript allows us to</span></span>
-<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// use `Date.prototype.toDateString()`</span></span>
+<span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// We can seamlessly use the types defined by the ORM on the frontend</span></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#CF222E">const</span><span style="color:#24292F"> </span><span style="color:#0550AE">lastUpdate</span><span style="color:#24292F"> </span><span style="color:#CF222E">=</span><span style="color:#24292F"> </span><span style="color:#0A3069">&#x27;To-do last update: &#x27;</span><span style="color:#24292F"> </span><span style="color:#CF222E">+</span><span style="color:#24292F"> todoItem.updatedAt.</span><span style="color:#8250DF">toDateString</span><span style="color:#24292F">()</span></span>
-<span class="line"></span>
 <span class="line"><span style="color:#24292F">  </span><span style="color:#6E7781">// ...</span></span>
 <span class="line"><span style="color:#24292F">}</span></span></code></pre></div>
-<p>The type of <code>todoItem.updatedAt</code> comes from the database/ORM and we seamlessly use it on the frontend.</p>
-<p>By using Telefunc with a TypeScript ORM, such as <a href="https://www.prisma.io/">Prisma</a>, we get end-to-end type safety all the way from database to frontend.</p><div style="margin-top:50px"><a href="https://github.com/vikejs/telefunc/edit/master/docs/pages/tour.page.mdx">✍<!-- --> Edit this page</a></div></div></div></div></div></div>
+<p>When using Telefunc with a TypeScript ORM (e.g. <a href="https://www.prisma.io/">Prisma</a>)
+or SQL builder (e.g. <a href="https://github.com/koskimas/kysely">Kysely</a> or <a href="https://github.com/stars/brillout/lists/sql">others</a>),
+we get end-to-end type safety all the way from database to frontend.</p><div style="margin-top:50px"><a href="https://github.com/vikejs/telefunc/edit/master/docs/pages/tour.page.mdx">✍<!-- --> Edit this page</a></div></div></div></div></div></div>
         
       <script type="module" src="/assets/renderer/_default.page.client.ts.81d7c904.js"></script><script id="vite-plugin-ssr_pageContext" type="application/json">{"pageContext":{"_pageId":"/pages/tour"}}</script></body>
     </html>
