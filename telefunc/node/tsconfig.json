@@ -5,7 +5,8 @@
     "target": "ES2017",
     "module": "CommonJS",
     "lib": ["DOM", "ESNext"],
-    "types": ["vite/client"]
+    "types": ["vite/client"],
+    "esModuleInterop": true
   },
   "exclude": ["./node_modules/", "./dist/", "**/*.spec.ts"],
   "include": ["./**/*"]

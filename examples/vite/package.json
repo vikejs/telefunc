@@ -1,16 +1,13 @@
 {
   "scripts": {
-    "dev": "npm run server",
-    "prod": "npm run build && npm run server:prod",
-    "build": "vite build && vite build --ssr",
-    "server": "node ./server.js",
-    "server:prod": "cross-env NODE_ENV=production node server.js"
+    "dev": "vite dev",
+    "preview": "vite build && vite build --ssr && vite preview"
   },
   "dependencies": {
     "cross-env": "^7.0.3",
     "express": "^4.17.1",
     "telefunc": "0.1.22",
-    "vite": "^2.7.12"
+    "vite": "npm:@brillout/vite@3.0.0-alpha.0"
   },
   "type": "module"
 }

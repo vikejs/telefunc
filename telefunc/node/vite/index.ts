@@ -8,6 +8,8 @@ import { retrieveDevServer } from './retrieveDevServer'
 import type { Plugin } from 'vite'
 import { distLinkOn, distLinkOff } from './distLink'
 import { importGlobOn } from './importGlob'
+import { devConfig } from './plugins/devConfig'
+import { previewConfig } from './plugins/previewConfig'
 
 function plugin(): Plugin[] {
   distLinkOff()
@@ -26,6 +28,8 @@ function plugin(): Plugin[] {
     transform(),
     build(),
     packageJsonFile(),
-    distLinkOn()
+    distLinkOn(),
+    ...devConfig(),
+    previewConfig()
   ]
 }

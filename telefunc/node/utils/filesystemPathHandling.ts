@@ -1,25 +1,42 @@
-import { win32, posix, sep } from 'path'
 import { assert } from './assert'
-import { assertPosixPath } from './assertPosixPath'
 
 export { toPosixPath }
+export { assertPosixPath }
 export { toSystemPath }
 
+const sepPosix = '/'
+const sepWin32 = '\\'
+
 function toPosixPath(path: string) {
-  if (process.platform !== 'win32') {
-    assert(sep === posix.sep)
+  if (isPosix()) {
     assertPosixPath(path)
     return path
-  } else {
-    assert(sep === win32.sep)
-    const pathPosix = path.split(win32.sep).join(posix.sep)
+  }
+  if (isWin32()) {
+    const pathPosix = path.split(sepWin32).join(sepPosix)
     assertPosixPath(pathPosix)
     return pathPosix
   }
+  assert(false)
+}
+
+function assertPosixPath(path: string) {
+  assert(path && !path.includes(sepWin32), `Wrongly formatted path: ${path}`)
 }
 
 function toSystemPath(path: string) {
-  path = path.split(posix.sep).join(sep)
-  path = path.split(win32.sep).join(sep)
-  return path
+  if (isPosix()) {
+    return toPosixPath(path)
+  }
+  if (isWin32()) {
+    return path.split(sepPosix).join(sepWin32)
+  }
+  assert(false)
+}
+
+function isWin32() {
+  return process.platform === 'win32'
+}
+function isPosix() {
+  return !isWin32()
 }

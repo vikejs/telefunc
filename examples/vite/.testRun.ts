@@ -3,7 +3,7 @@ import { page, run, urlBase, autoRetry, fetchHtml, fetch } from '../../libframe/
 export { testRun }
 
 function testRun(
-  cmd: 'npm run dev' | 'npm run prod' | 'npm run start',
+  cmd: 'npm run dev' | 'npm run prod' | 'npm run start' | 'npm run preview',
   { skipShieldGenerationTest }: { skipShieldGenerationTest?: true } = {}
 ) {
   run(cmd)

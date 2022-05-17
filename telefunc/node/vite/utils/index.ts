@@ -1,1 +1,6 @@
 export * from './isSSR'
+export * from './getOutDir'
+export * from './addTelefuncMiddleware'
+export * from './apply'
+export * from '../../utils/assert'
+export * from '../../utils/filesystemPathHandling'
