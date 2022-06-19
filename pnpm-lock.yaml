@@ -156,14 +156,18 @@ importers:
 
   examples/vite:
     specifiers:
+      '@types/express': ^4.17.10
       cross-env: ^7.0.3
       express: ^4.17.1
       telefunc: 0.1.22
+      ts-node: ^10.7.0
       vite: ^2.7.12
     dependencies:
+      '@types/express': 4.17.13
       cross-env: 7.0.3
       express: 4.17.2
       telefunc: link:../../telefunc
+      ts-node: 10.7.0
       vite: 2.7.13
 
   examples/vite-plugin-ssr:
@@ -15908,6 +15912,35 @@ packages:
       diff: 4.0.2
       make-error: 1.3.6
       typescript: 4.5.5
+      v8-compile-cache-lib: 3.0.0
+      yn: 3.1.1
+    dev: false
+
+  /ts-node/10.7.0:
+    resolution: {integrity: sha512-TbIGS4xgJoX2i3do417KSaep1uRAW/Lu+WAL2doDHC0D6ummjirVOXU5/7aiZotbQ5p1Zp9tP7U6cYhA0O7M8A==}
+    hasBin: true
+    peerDependencies:
+      '@swc/core': '>=1.2.50'
+      '@swc/wasm': '>=1.2.50'
+      '@types/node': '*'
+      typescript: '>=2.7'
+    peerDependenciesMeta:
+      '@swc/core':
+        optional: true
+      '@swc/wasm':
+        optional: true
+    dependencies:
+      '@cspotcode/source-map-support': 0.7.0
+      '@tsconfig/node10': 1.0.8
+      '@tsconfig/node12': 1.0.9
+      '@tsconfig/node14': 1.0.1
+      '@tsconfig/node16': 1.0.2
+      acorn: 8.7.0
+      acorn-walk: 8.2.0
+      arg: 4.1.3
+      create-require: 1.1.1
+      diff: 4.0.2
+      make-error: 1.3.6
       v8-compile-cache-lib: 3.0.0
       yn: 3.1.1
     dev: false

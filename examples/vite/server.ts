@@ -1,4 +1,4 @@
-import express from 'express'
+import express, { Express } from 'express'
 import { telefunc } from 'telefunc'
 
 startServer()
@@ -10,13 +10,13 @@ async function startServer() {
   start(app)
 }
 
-function start(app) {
+function start(app: Express) {
   const port = process.env.PORT || 3000
   app.listen(port)
   console.log(`Server running at http://localhost:${port}`)
 }
 
-function installTelefunc(app) {
+function installTelefunc(app: Express) {
   app.use(express.text())
   app.all('/_telefunc', async (req, res) => {
     const { originalUrl: url, method, body } = req
@@ -25,7 +25,7 @@ function installTelefunc(app) {
   })
 }
 
-async function installFrontend(app) {
+async function installFrontend(app: Express) {
   if (process.env.NODE_ENV === 'production') {
     const root = await getRoot()
     app.use(express.static(`${root}/dist/client`))
