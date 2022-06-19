@@ -1,0 +1,20 @@
+{
+  "name": "telefunc-svelte-kit",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "svelte-kit dev",
+    "build": "svelte-kit build",
+    "package": "svelte-kit package",
+    "preview": "svelte-kit preview"
+  },
+  "devDependencies": {
+    "@sveltejs/kit": "next",
+    "svelte": "^3.46.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "@sveltejs/adapter-node": "*",
+    "cookie": "^0.4.1",
+    "telefunc": "^0.1.17"
+  }
+}
