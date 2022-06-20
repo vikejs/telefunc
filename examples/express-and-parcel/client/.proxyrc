@@ -1,0 +1,5 @@
+{
+  "/_telefunc": {
+    "target": "http://localhost:5000/",
+  }
+}

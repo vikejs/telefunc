@@ -1,0 +1,23 @@
+{
+  "name": "parcel-transformer-telefunc",
+  "version": "1.0.0",
+  "description": "Parcel transformer plugin for telefunc. Transforms the functions from included server-side telefunc modules (*.telefunc.ts) into browser code that makes http calls to the server.",
+  "main": "transformer.js",
+  "engines": {
+    "parcel": "2.x"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+
+  "dependencies": {
+    "@parcel/plugin": "^2.4.0",
+    "telefunc": "^0.1.20",
+    "find-pkg": "^2.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.4",
+    "telefunc": "file:../telefunc"
+  }
+}

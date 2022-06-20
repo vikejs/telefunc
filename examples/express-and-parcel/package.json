@@ -1,0 +1,17 @@
+{
+  "main": "server.ts",
+  "scripts": {
+    "start": "cd client && npm run build && cd .. && ts-node server.ts",
+    "dev:backend": "nodemon",
+    "dev:frontend": "cd client && npm run dev"
+  },
+  "dependencies": {
+    "express": "^4.17.3",
+    "telefunc": "^0.1.19",
+    "ts-node": "^10.6.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "nodemon": "^2.0.15"
+  }
+}

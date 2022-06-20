@@ -30,6 +30,10 @@
     "./webpack/loader": {
       "node": "./dist/node/webpack/loader.js"
     },
+    "./transformer": {
+      "node": "./dist/node/transformer/transformTelefuncFile.js"
+    },
+
     "./next": {
       "node": "./dist/node/next/index.js"
     },

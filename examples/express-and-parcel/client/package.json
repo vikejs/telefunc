@@ -1,0 +1,10 @@
+{
+  "source": "index.html",
+  "scripts": {
+    "dev": "parcel **.html",
+    "build": "parcel build --no-cache"
+  },
+  "devDependencies": {
+    "parcel": "^2.3.2",
+  }
+}
