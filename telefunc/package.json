@@ -3,10 +3,12 @@
   "version": "0.1.22",
   "scripts": {
     "build": "rm -rf dist/ && tsc --build && pnpm run tsc:tests",
+    "build:swc": "cd ./node/swc/ && cargo prepublish --release && cp ../../node/swc/target/wasm32-wasi/release/swc.wasm ../../dist/swc.wasm",
     "dev": "pnpm run dev:fast",
     "// `dev:fast` and `dev:slow` achieve the same, but `dev:fast` is much faster": "",
     "dev:slow": "tsc --build --watch",
     "dev:fast": "pnpm run tsc:watch:node & pnpm run tsc:watch:client",
+    "dev:swc": "cd ./node/swc/ && cargo prepublish && cp ../../node/swc/target/wasm32-wasi/debug/swc.wasm ../../dist/swc.wasm",
     "tsc:watch:node": "tsc --incremental --watch --project ./node/tsconfig.json",
     "tsc:watch:client": "tsc --incremental --watch --project ./client/tsconfig.json",
     "tsc:tests": "tsc --project ./tsconfig.tests.json"
@@ -30,6 +32,7 @@
     "./webpack/loader": {
       "node": "./dist/node/webpack/loader.js"
     },
+    "./swc": "./dist/swc.wasm",
     "./next": {
       "node": "./dist/node/next/index.js"
     },
@@ -59,6 +62,8 @@
   "files": [
     "dist/node/",
     "dist/client/",
+    "dist/",
+    "dist/swc.wasm",
     "*.d.ts",
     "*.js"
   ],
