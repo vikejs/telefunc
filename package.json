@@ -39,5 +39,12 @@
   },
   "dependencies": {
     "@brillout/submodule-init": "0.1.2"
+  },
+  "pnpm": {
+    "overrides": {
+      "@vitejs/plugin-react": "2.0.0",
+      "@vitejs/plugin-vue": "3.0.1",
+      "vite": "3.0.3"
+    }
   }
 }
